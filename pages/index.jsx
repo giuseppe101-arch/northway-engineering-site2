@@ -41,24 +41,56 @@ export default function Home() {
         </section>
 
         <section id="services" className="max-w-6xl mx-auto px-6 py-12">
-          <h2 className="text-2xl font-bold">Our services</h2>
-          <p className="mt-2 text-gray-600">Comprehensive fabrication services from CAD & detailing through to finishing and installation.</p>
+  <h2 className="text-2xl font-bold">Our services</h2>
+  <p className="mt-2 text-gray-600">
+    Design, fabrication and installation of bespoke steelwork for homes and businesses across the North West.
+  </p>
 
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="font-semibold text-lg">Steel Fabrication</h3>
-              <p className="mt-3 text-gray-600 text-sm">Structural frames, staircases, handrails, bespoke fabrications.</p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="font-semibold text-lg">Machining & Finishing</h3>
-              <p className="mt-3 text-gray-600 text-sm">CNC cutting, drilling, grinding and powder-coating coordination.</p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="font-semibold text-lg">Site Installation</h3>
-              <p className="mt-3 text-gray-600 text-sm">Onsite erection, alignment and certified welding procedures.</p>
-            </div>
-          </div>
-        </section>
+  <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="bg-white rounded-lg p-6 shadow-sm">
+      <h3 className="font-semibold text-lg">Composite Gates</h3>
+      <p className="mt-3 text-gray-600 text-sm">
+        Bespoke steel frames with low-maintenance composite infills. Driveway, side and pedestrian gates made to measure.
+      </p>
+    </div>
+
+    <div className="bg-white rounded-lg p-6 shadow-sm">
+      <h3 className="font-semibold text-lg">Composite Fencing</h3>
+      <p className="mt-3 text-gray-600 text-sm">
+        Steel posts and rails with composite boards for a modern, low-maintenance boundary that won’t rot or warp.
+      </p>
+    </div>
+
+    <div className="bg-white rounded-lg p-6 shadow-sm">
+      <h3 className="font-semibold text-lg">Steel &amp; Glass Crittall Doors</h3>
+      <p className="mt-3 text-gray-600 text-sm">
+        Slimline steel-framed doors and screens with safety glass for kitchens, extensions and internal room dividers.
+      </p>
+    </div>
+
+    <div className="bg-white rounded-lg p-6 shadow-sm">
+      <h3 className="font-semibold text-lg">Balustrade</h3>
+      <p className="mt-3 text-gray-600 text-sm">
+        Internal and external balustrades in steel and glass. Stairs, landings, balconies and terrace guarding to current regs.
+      </p>
+    </div>
+
+    <div className="bg-white rounded-lg p-6 shadow-sm">
+      <h3 className="font-semibold text-lg">Structural Steel</h3>
+      <p className="mt-3 text-gray-600 text-sm">
+        Beams, posts, frames and mezzanines supplied and installed from engineer’s drawings, including lifting where required.
+      </p>
+    </div>
+
+    <div className="bg-white rounded-lg p-6 shadow-sm">
+      <h3 className="font-semibold text-lg">Gate Automation</h3>
+      <p className="mt-3 text-gray-600 text-sm">
+        Swing and sliding gate automation with access control. Automation for new installations or existing gates.
+      </p>
+    </div>
+  </div>
+</section>
+
 
         <section id="projects" className="bg-white py-12">
   <div className="max-w-6xl mx-auto px-6">
