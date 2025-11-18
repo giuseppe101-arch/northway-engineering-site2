@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import { SITE } from '../siteConfig'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
