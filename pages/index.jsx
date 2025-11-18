@@ -5,6 +5,7 @@ import { SITE } from '../siteConfig'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
+
 export default function Home() {
   return (
     <>
@@ -126,7 +127,6 @@ export default function Home() {
   </div>
 </section>
 
-
 <section id="services" className="max-w-6xl mx-auto px-6 py-12">
   <h2 className="text-2xl font-bold">Our services</h2>
   <p className="mt-2 text-gray-600">
@@ -134,42 +134,60 @@ export default function Home() {
   </p>
 
   <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <Link href="/products/composite-gates" className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition">
+    <Link
+      href="/products/composite-gates"
+      className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition"
+    >
       <h3 className="font-semibold text-lg">Composite Gates</h3>
       <p className="mt-3 text-gray-600 text-sm">
         Bespoke steel frames with low-maintenance composite infills. Driveway, side and pedestrian gates made to measure.
       </p>
     </Link>
 
-    <Link href="/products/composite-fencing" className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition">
+    <Link
+      href="/products/composite-fencing"
+      className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition"
+    >
       <h3 className="font-semibold text-lg">Composite Fencing</h3>
       <p className="mt-3 text-gray-600 text-sm">
         Steel posts and rails with composite boards for a modern, low-maintenance boundary that won’t rot or warp.
       </p>
     </Link>
 
-    <Link href="/products/crittall-doors" className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition">
+    <Link
+      href="/products/crittall-doors"
+      className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition"
+    >
       <h3 className="font-semibold text-lg">Steel &amp; Glass Crittall Doors</h3>
       <p className="mt-3 text-gray-600 text-sm">
         Slimline steel-framed doors and screens with safety glass for kitchens, extensions and internal room dividers.
       </p>
     </Link>
 
-    <Link href="/products/balustrade" className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition">
+    <Link
+      href="/products/balustrade"
+      className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition"
+    >
       <h3 className="font-semibold text-lg">Balustrade</h3>
       <p className="mt-3 text-gray-600 text-sm">
         Internal and external balustrades in steel and glass. Stairs, landings, balconies and terrace guarding to current regs.
       </p>
     </Link>
 
-    <Link href="/products/structural-steel" className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition">
+    <Link
+      href="/products/structural-steel"
+      className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition"
+    >
       <h3 className="font-semibold text-lg">Structural Steel</h3>
       <p className="mt-3 text-gray-600 text-sm">
         Beams, posts, frames and mezzanines supplied and installed from engineer’s drawings, including lifting where required.
       </p>
     </Link>
 
-    <Link href="/products/gate-automation" className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition">
+    <Link
+      href="/products/gate-automation"
+      className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition"
+    >
       <h3 className="font-semibold text-lg">Gate Automation</h3>
       <p className="mt-3 text-gray-600 text-sm">
         Swing and sliding gate automation with access control. Automation for new installations or existing gates.
@@ -177,6 +195,8 @@ export default function Home() {
     </Link>
   </div>
 </section>
+
+
 
 
 
