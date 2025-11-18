@@ -72,16 +72,15 @@ export default function Home() {
                 <div className="relative w-full h-48">
                   <Image
                     src="/images/composite-gate.jpg"
-                    alt="Composite infill driveway gates by Northway Engineering"
+                    alt="Composite Gates by Northway Engineering"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="p-4">
-                  <h4 className="font-semibold">Composite infill gates</h4>
+                  <h4 className="font-semibold">Composite & Steel Gates</h4>
                   <p className="text-sm text-gray-600 mt-2">
-                    Bespoke steel frames with low-maintenance composite board infills and
-                    matching pedestrian gate.
+                    Bespoke steel frames with low-maintenance composite board infills.
                   </p>
                 </div>
               </div>
