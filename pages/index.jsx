@@ -126,23 +126,71 @@ export default function Home() {
 </section>
 
 
-        <section id="about" className="max-w-6xl mx-auto px-6 py-12">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h2 className="text-2xl font-bold">About {SITE.name}</h2>
-              <p className="mt-4 text-gray-600">Established fabrication workshop with experienced engineers and certified welders. We prioritise safety, quality control and on-time delivery.</p>
-              <ul className="mt-6 space-y-3 text-sm text-gray-700">
-                <li>• CAD detailing (Tekla / AutoCAD)</li>
-                <li>• CNC plasma/oxy cutting</li>
-                <li>• On-site installation teams</li>
-                <li>• Quality control & testing</li>
-              </ul>
-            </div>
-            <div className="rounded-lg overflow-hidden shadow">
-              <div className="w-full h-64 bg-gray-200 flex items-center justify-center">Team photo</div>
-            </div>
-          </div>
-        </section>
+       <section id="services" className="max-w-6xl mx-auto px-6 py-12">
+  <h2 className="text-2xl font-bold">Our services</h2>
+  <p className="mt-2 text-gray-600">
+    Design, fabrication and installation of bespoke steelwork for homes and businesses across the North West.
+  </p>
+
+  <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div className="bg-white rounded-lg p-6 shadow-sm">
+      <Link href="/products/composite-gates">
+        <h3 className="font-semibold text-lg cursor-pointer hover:text-slate-700">Composite Gates</h3>
+      </Link>
+      <p className="mt-3 text-gray-600 text-sm">
+        Bespoke steel frames with low-maintenance composite infills. Driveway, side and pedestrian gates made to measure.
+      </p>
+    </div>
+
+    <div className="bg-white rounded-lg p-6 shadow-sm">
+      <Link href="/products/composite-fencing">
+        <h3 className="font-semibold text-lg cursor-pointer hover:text-slate-700">Composite Fencing</h3>
+      </Link>
+      <p className="mt-3 text-gray-600 text-sm">
+        Steel posts and rails with composite boards for a modern, low-maintenance boundary that won’t rot or warp.
+      </p>
+    </div>
+
+    <div className="bg-white rounded-lg p-6 shadow-sm">
+      <Link href="/products/crittall-doors">
+        <h3 className="font-semibold text-lg cursor-pointer hover:text-slate-700">Steel &amp; Glass Crittall Doors</h3>
+      </Link>
+      <p className="mt-3 text-gray-600 text-sm">
+        Slimline steel-framed doors and screens with safety glass for kitchens, extensions and internal room dividers.
+      </p>
+    </div>
+
+    <div className="bg-white rounded-lg p-6 shadow-sm">
+      <Link href="/products/balustrade">
+        <h3 className="font-semibold text-lg cursor-pointer hover:text-slate-700">Balustrade</h3>
+      </Link>
+      <p className="mt-3 text-gray-600 text-sm">
+        Internal and external balustrades in steel and glass. Stairs, landings, balconies and terrace guarding to current regulations.
+      </p>
+    </div>
+
+    <div className="bg-white rounded-lg p-6 shadow-sm">
+      <Link href="/products/structural-steel">
+        <h3 className="font-semibold text-lg cursor-pointer hover:text-slate-700">Structural Steel</h3>
+      </Link>
+      <p className="mt-3 text-gray-600 text-sm">
+        Beams, posts, frames and mezzanines supplied and installed from engineer’s drawings, including lifting where required.
+      </p>
+    </div>
+
+    <div className="bg-white rounded-lg p-6 shadow-sm">
+      <Link href="/products/gate-automation">
+        <h3 className="font-semibold text-lg cursor-pointer hover:text-slate-700">Gate Automation</h3>
+      </Link>
+      <p className="mt-3 text-gray-600 text-sm">
+        Swing and sliding gate automation with access control. Automation for new installations or existing gates.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
         <section id="contact" className="max-w-6xl mx-auto px-6 py-12">
           <div className="grid md:grid-cols-2 gap-8">
