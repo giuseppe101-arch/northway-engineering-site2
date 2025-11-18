@@ -97,15 +97,15 @@ export default function Home() {
                 <div className="p-4">
                   <h4 className="font-semibold">Crittall-style doors</h4>
                   <p className="text-sm text-gray-600 mt-2">
-                    Slimline steel-framed doors and screens with modern thermal glazing
-                    for residential extension.
+                    Slimline steel-framed doors and screens to suit the modern home/business.
+              
                   </p>
                 </div>
               </div>
 
               <div className="rounded-lg overflow-hidden shadow">
                 <div className="w-full h-48 bg-gray-200 flex items-center justify-center">
-                  Your next project here
+                  Balustrade
                 </div>
                 <div className="p-4">
                   <h4 className="font-semibold">Structural &amp; architectural steel</h4>
