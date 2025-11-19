@@ -91,13 +91,13 @@ export default function Home() {
                 <div className="relative w-full h-48">
                   <Image
                     src="/images/crittall-doors.jpg"
-                    alt="Crittall style doors and screens by Northway Engineering"
+                    alt="Crittall Style Doors & Screens by Northway Engineering"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="p-4">
-                  <h4 className="font-semibold">Crittall-style doors</h4>
+                  <h4 className="font-semibold">Crittall-Style Doors</h4>
                   <p className="text-sm text-gray-600 mt-2">
                     Slimline steel-framed doors and screens to suit the modern home/business.
                   </p>
@@ -115,7 +115,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-4">
-                  <h4 className="font-semibold">Structural &amp; architectural steel</h4>
+                  <h4 className="font-semibold">Structural &amp; Architectural Steel</h4>
                   <p className="text-sm text-gray-600 mt-2">
                     Frames, balconies, staircases and bespoke fabrications to suit your
                     project.
