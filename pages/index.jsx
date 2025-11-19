@@ -68,6 +68,7 @@ export default function Home() {
             <h2 className="text-2xl font-bold">Selected projects</h2>
 
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {/* Card 1 */}
               <div className="rounded-lg overflow-hidden shadow">
                 <div className="relative w-full h-48">
                   <Image
@@ -78,13 +79,14 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-4">
-                  <h4 className="font-semibold">Composite & Steel Gates</h4>
+                  <h4 className="font-semibold">Composite &amp; Steel Gates</h4>
                   <p className="text-sm text-gray-600 mt-2">
                     Bespoke steel frames with low-maintenance composite board infills.
                   </p>
                 </div>
               </div>
 
+              {/* Card 2 */}
               <div className="rounded-lg overflow-hidden shadow">
                 <div className="relative w-full h-48">
                   <Image
@@ -98,20 +100,20 @@ export default function Home() {
                   <h4 className="font-semibold">Crittall-style doors</h4>
                   <p className="text-sm text-gray-600 mt-2">
                     Slimline steel-framed doors and screens to suit the modern home/business.
-              
                   </p>
                 </div>
               </div>
 
-              <div className="relative w-full h-48">
-  <Image
-    src="/images/wrought-iron-gate.jpg"
-    alt="Wrought iron gate installation by Northway Engineering"
-    fill
-    className="object-cover"
-  />
-</div>
-
+              {/* Card 3 – wrought iron gates */}
+              <div className="rounded-lg overflow-hidden shadow">
+                <div className="relative w-full h-48">
+                  <Image
+                    src="/images/wrought-iron-gate.jpg"
+                    alt="Wrought iron gate installation by Northway Engineering"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <div className="p-4">
                   <h4 className="font-semibold">Structural &amp; architectural steel</h4>
                   <p className="text-sm text-gray-600 mt-2">
@@ -273,4 +275,5 @@ export default function Home() {
     </>
   )
 }
+
 
