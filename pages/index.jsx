@@ -103,10 +103,15 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="rounded-lg overflow-hidden shadow">
-                <div className="w-full h-48 bg-gray-200 flex items-center justify-center">
-                  Balustrade
-                </div>
+              <div className="relative w-full h-48">
+  <Image
+    src="/images/wrought-iron-gate.jpg"
+    alt="Wrought iron gate installation by Northway Engineering"
+    fill
+    className="object-cover"
+  />
+</div>
+
                 <div className="p-4">
                   <h4 className="font-semibold">Structural &amp; architectural steel</h4>
                   <p className="text-sm text-gray-600 mt-2">
