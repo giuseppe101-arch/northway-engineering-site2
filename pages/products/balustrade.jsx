@@ -19,7 +19,7 @@ export default function BalustradePage() {
       <main className="bg-gray-50">
         {/* INTRO */}
         <section className="max-w-5xl mx-auto px-6 py-16">
-         <h1 className="text-3xl font-bold">Balustrades (Updated)</h1>
+         <h1 className="text-3xl font-bold">Balustrades </h1>
           <p className="mt-4 text-gray-600 max-w-2xl">
             Internal and external balustrades in steel and glass. Manufactured to suit your
             project — stairs, landings, balconies and terrace guarding with a clean modern finish.
