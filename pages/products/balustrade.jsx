@@ -29,9 +29,7 @@ export default function BalustradePage() {
         {/* GALLERY */}
         <section className="max-w-6xl mx-auto px-6 pb-20">
           <h2 className="text-2xl font-bold mb-2">Gallery</h2>
-          <p className="mt-2 text-red-600 font-bold">
-  BALUSTRADE PAGE UPDATED (if you can see this, the new code is live)
-</p>
+         
 
           <p className="text-gray-600 mb-8">
             A selection of recent balustrade installations.
