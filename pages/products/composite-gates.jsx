@@ -40,93 +40,94 @@ export default function CompositeGatesPage() {
             </Link>
           </div>
 
-          {/* GALLERY */}
-          <div className="mt-12">
-            <h2 className="text-2xl font-bold">Gallery</h2>
-            <p className="mt-2 text-gray-600">
-              A selection of recent composite infill gate installations (driveway and side gates).
-            </p>
+        {/* GALLERY */}
+<div className="mt-12">
+  <h2 className="text-2xl font-bold">Gallery</h2>
+  <p className="mt-2 text-gray-600">
+    A selection of recent composite infill driveway and side gate installations.
+  </p>
 
-            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="rounded-lg overflow-hidden shadow bg-white">
-                <div className="relative w-full h-56">
-                  <Image
-                    src="/images/composite-gates-01-driveway.jpg"
-                    alt="Composite infill driveway gates with steel frame"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
+  <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="rounded-lg overflow-hidden shadow bg-white">
+      <div className="relative w-full h-56">
+        <Image
+          src="/images/composite-gates-01-driveway.jpg"
+          alt="Composite infill driveway gates with steel frame"
+          fill
+          className="object-cover"
+        />
+      </div>
+    </div>
 
-              <div className="rounded-lg overflow-hidden shadow bg-white">
-                <div className="relative w-full h-56">
-                  <Image
-                    src="/images/composite-gates-02-side-gate.jpg"
-                    alt="Composite infill side gate with steel frame"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
+    <div className="rounded-lg overflow-hidden shadow bg-white">
+      <div className="relative w-full h-56">
+        <Image
+          src="/images/composite-gates-02-driveway.jpg"
+          alt="Composite infill side gate installation"
+          fill
+          className="object-cover"
+        />
+      </div>
+    </div>
 
-              <div className="rounded-lg overflow-hidden shadow bg-white">
-                <div className="relative w-full h-56">
-                  <Image
-                    src="/images/composite-gates-03-arched.jpg"
-                    alt="Composite infill gate with arched top detail"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
+    <div className="rounded-lg overflow-hidden shadow bg-white">
+      <div className="relative w-full h-56">
+        <Image
+          src="/images/composite-gates-03-driveway.jpg"
+          alt="Composite infill driveway gates with arched top"
+          fill
+          className="object-cover"
+        />
+      </div>
+    </div>
 
-              <div className="rounded-lg overflow-hidden shadow bg-white">
-                <div className="relative w-full h-56">
-                  <Image
-                    src="/images/composite-gates-04-double-grey.jpg"
-                    alt="Double composite infill driveway gates in grey"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
+    <div className="rounded-lg overflow-hidden shadow bg-white">
+      <div className="relative w-full h-56">
+        <Image
+          src="/images/composite-gates-04-driveway.jpg"
+          alt="Double composite infill driveway gates"
+          fill
+          className="object-cover"
+        />
+      </div>
+    </div>
 
-              <div className="rounded-lg overflow-hidden shadow bg-white">
-                <div className="relative w-full h-56">
-                  <Image
-                    src="/images/composite-gates-05-double-brown.jpg"
-                    alt="Double composite infill driveway gates in brown"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
+    <div className="rounded-lg overflow-hidden shadow bg-white">
+      <div className="relative w-full h-56">
+        <Image
+          src="/images/composite-gates-05-driveway.jpg"
+          alt="Composite infill driveway gates in brown finish"
+          fill
+          className="object-cover"
+        />
+      </div>
+    </div>
 
-              <div className="rounded-lg overflow-hidden shadow bg-white">
-                <div className="relative w-full h-56">
-                  <Image
-                    src="/images/composite-gates-06-scroll-top.jpg"
-                    alt="Composite infill driveway gates with decorative scroll top"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
+    <div className="rounded-lg overflow-hidden shadow bg-white">
+      <div className="relative w-full h-56">
+        <Image
+          src="/images/composite-gates-06-driveway.jpg"
+          alt="Composite infill driveway gates with decorative scroll top"
+          fill
+          className="object-cover"
+        />
+      </div>
+    </div>
 
-              {/* Full-width last image */}
-              <div className="rounded-lg overflow-hidden shadow bg-white sm:col-span-2 lg:col-span-3">
-                <div className="relative w-full h-72">
-                  <Image
-                    src="/images/composite-gates-07-scroll-top-close.jpg"
-                    alt="Close view of composite infill gates with scroll top and spiked detail"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+    {/* Full-width final image */}
+    <div className="rounded-lg overflow-hidden shadow bg-white sm:col-span-2 lg:col-span-3">
+      <div className="relative w-full h-72">
+        <Image
+          src="/images/composite-gates-07-driveway.jpg"
+          alt="Close-up view of composite infill driveway gates with decorative top detail"
+          fill
+          className="object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
 
           {/* QUICK FEATURES */}
           <div className="mt-12 bg-white rounded-lg shadow p-6">
