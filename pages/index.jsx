@@ -27,7 +27,7 @@ export default function Home() {
 
             <div className="mt-8 flex gap-4">
               <a
-                href="#contact"
+                href="/#contact"
                 className="inline-block bg-slate-800 text-white px-6 py-3 rounded font-medium"
               >
                 Request a quote
@@ -52,7 +52,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* HERO IMAGE — UNCHANGED */}
           <div className="rounded-lg overflow-hidden shadow-lg relative w-full h-80">
             <Image
               src="/images/crittall-doors.jpg"
@@ -87,25 +86,23 @@ export default function Home() {
                 </div>
               </div>
 
-             {/* Card 2 */}
-<div className="rounded-lg overflow-hidden shadow">
-  <div className="relative w-full h-48">
-    {/* Updated image for the card only */}
-    <Image
-      src="/images/glassdoor4.jpg"
-      alt="Crittall Style Doors & Screens by Northway Engineering"
-      fill
-      className="object-cover object-top"
-    />
-  </div>
-  <div className="p-4">
-    <h4 className="font-semibold">Crittall-Style Doors</h4>
-    <p className="text-sm text-gray-600 mt-2">
-      Slimline steel-framed doors and screens to suit the modern home/business.
-    </p>
-  </div>
-</div>
-
+              {/* Card 2 */}
+              <div className="rounded-lg overflow-hidden shadow">
+                <div className="relative w-full h-48">
+                  <Image
+                    src="/images/glassdoor4.jpg"
+                    alt="Crittall Style Doors & Screens by Northway Engineering"
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div className="p-4">
+                  <h4 className="font-semibold">Crittall-Style Doors</h4>
+                  <p className="text-sm text-gray-600 mt-2">
+                    Slimline steel-framed doors and screens to suit the modern home/business.
+                  </p>
+                </div>
+              </div>
 
               {/* Card 3 */}
               <div className="rounded-lg overflow-hidden shadow">
@@ -138,45 +135,69 @@ export default function Home() {
           </p>
 
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link href="/products/composite-gates" className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition">
+            <Link
+              href="/products/composite-gates"
+              className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition"
+            >
               <h3 className="font-semibold text-lg">Composite Gates</h3>
               <p className="mt-3 text-gray-600 text-sm">
-                Bespoke steel frames with low-maintenance composite infills.
+                Bespoke steel frames with low-maintenance composite infills. Driveway,
+                side and pedestrian gates made to measure.
               </p>
             </Link>
 
-            <Link href="/products/composite-fencing" className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition">
+            <Link
+              href="/products/composite-fencing"
+              className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition"
+            >
               <h3 className="font-semibold text-lg">Composite Fencing</h3>
               <p className="mt-3 text-gray-600 text-sm">
-                Steel posts and rails with composite boards for a modern boundary.
+                Steel posts and rails with composite boards for a modern, low-maintenance
+                boundary that won’t rot or warp.
               </p>
             </Link>
 
-            <Link href="/products/crittall-doors" className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition">
+            <Link
+              href="/products/crittall-doors"
+              className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition"
+            >
               <h3 className="font-semibold text-lg">Steel &amp; Glass Crittall Doors</h3>
               <p className="mt-3 text-gray-600 text-sm">
-                Slimline steel-framed doors and screens with safety glass.
+                Slimline steel-framed doors and screens with safety glass for kitchens,
+                extensions and internal room dividers.
               </p>
             </Link>
 
-            <Link href="/products/balustrade" className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition">
+            <Link
+              href="/products/balustrade"
+              className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition"
+            >
               <h3 className="font-semibold text-lg">Balustrade</h3>
               <p className="mt-3 text-gray-600 text-sm">
-                Internal and external balustrades in steel and glass.
+                Internal and external balustrades in steel and glass. Stairs, landings,
+                balconies and terrace guarding to current regs.
               </p>
             </Link>
 
-            <Link href="/products/structural-steel" className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition">
+            <Link
+              href="/products/structural-steel"
+              className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition"
+            >
               <h3 className="font-semibold text-lg">Structural Steel</h3>
               <p className="mt-3 text-gray-600 text-sm">
-                Beams, posts, frames and mezzanines supplied and installed.
+                Beams, posts, frames and mezzanines supplied and installed from
+                engineer’s drawings, including lifting where required.
               </p>
             </Link>
 
-            <Link href="/products/gate-automation" className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition">
+            <Link
+              href="/products/gate-automation"
+              className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition"
+            >
               <h3 className="font-semibold text-lg">Gate Automation</h3>
               <p className="mt-3 text-gray-600 text-sm">
-                Swing and sliding gate automation with access control.
+                Swing and sliding gate automation with access control. Automation for new
+                installations or existing gates.
               </p>
             </Link>
           </div>
@@ -188,7 +209,8 @@ export default function Home() {
             <div>
               <h2 className="text-2xl font-bold">Get an accurate quote</h2>
               <p className="mt-3 text-gray-600">
-                Send drawings or project details and we’ll respond with a costed quote.
+                Send drawings or project details and we’ll respond with a costed quote
+                and lead time.
               </p>
 
               <dl className="mt-6 text-sm text-gray-700">
@@ -208,21 +230,46 @@ export default function Home() {
               action="https://formspree.io/f/xqanewel"
               method="POST"
             >
-              <input type="hidden" name="_subject" value="New quote request from Northway Engineering website" />
+              <input
+                type="hidden"
+                name="_subject"
+                value="New quote request from Northway Engineering website"
+              />
 
               <label className="block text-sm font-medium">Name</label>
-              <input name="name" required className="mt-1 block w-full border border-gray-200 rounded px-3 py-2" />
+              <input
+                name="name"
+                required
+                className="mt-1 block w-full border border-gray-200 rounded px-3 py-2"
+              />
 
               <label className="block text-sm font-medium mt-4">Company</label>
-              <input name="company" className="mt-1 block w-full border border-gray-200 rounded px-3 py-2" />
+              <input
+                name="company"
+                className="mt-1 block w-full border border-gray-200 rounded px-3 py-2"
+              />
 
               <label className="block text-sm font-medium mt-4">Email</label>
-              <input name="email" type="email" required className="mt-1 block w-full border border-gray-200 rounded px-3 py-2" />
+              <input
+                name="email"
+                type="email"
+                required
+                className="mt-1 block w-full border border-gray-200 rounded px-3 py-2"
+              />
 
-              <label className="block text-sm font-medium mt-4">Project details / message</label>
-              <textarea name="message" rows={5} className="mt-1 block w-full border border-gray-200 rounded px-3 py-2" />
+              <label className="block text-sm font-medium mt-4">
+                Project details / message
+              </label>
+              <textarea
+                name="message"
+                rows={5}
+                className="mt-1 block w-full border border-gray-200 rounded px-3 py-2"
+              />
 
-              <button type="submit" className="mt-6 bg-slate-800 text-white px-5 py-3 rounded">
+              <button
+                type="submit"
+                className="mt-6 bg-slate-800 text-white px-5 py-3 rounded"
+              >
                 Send enquiry
               </button>
             </form>
