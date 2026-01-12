@@ -133,13 +133,13 @@ export default function BalustradesPage() {
 
               <div className="mt-6 flex flex-wrap gap-3">
                 <a
-                  href="/contact"
+                  href="/#contact"
                   className="inline-flex items-center justify-center rounded-xl bg-white text-gray-900 px-5 py-3 font-semibold shadow-sm"
                 >
                   Contact us
                 </a>
                 <a
-                  href="/services"
+                  href="/#services"
                   className="inline-flex items-center justify-center rounded-xl border border-white/30 text-white px-5 py-3 font-semibold"
                 >
                   View all services
