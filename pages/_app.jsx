@@ -1,5 +1,20 @@
+import Head from 'next/head'
 import '../styles/globals.css'
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <Head>
+        {/* Google Search Console verification */}
+        <meta
+          name="google-site-verification"
+          content=<meta name="google-site-verification" content="EkMwvXzFzU7eWlt5qCEn3hc1Jp_d2db1hDayxg_UJNY" />
+        />
+      </Head>
+
+      <Component {...pageProps} />
+    </>
+  )
 }
+
+export default MyApp
