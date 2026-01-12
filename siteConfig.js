@@ -5,5 +5,5 @@ export const SITE = {
   phone: "07557237196",
   address: "Liverpool Road North, Maghull, L31 2HN",
   description: "Steel fabrication & structural engineering — design, fabrication and installation.",
-  url: "https://your-domain.example"
+  url: "https://www.northwayengineering.co.uk
 }
