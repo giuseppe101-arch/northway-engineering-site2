@@ -10,11 +10,43 @@ export default function Home() {
     <>
       <Head>
         <title>Steel Fabrication Liverpool | Northway Engineering</title>
+
         <meta
           name="description"
           content="Northway Engineering provides structural steel fabrication, composite gates, fencing, balustrades and gate automation across Liverpool and the North West."
         />
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* Structured data for Google (Local Business) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ConstructionBusiness",
+              "name": "Northway Engineering",
+              "url": "https://www.northwayengineering.co.uk",
+              "logo": "https://www.northwayengineering.co.uk/images/logo.jpg",
+              "telephone": "07557237196",
+              "email": "northwayengineeringltd@gmail.com",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Liverpool Road North",
+                "addressLocality": "Maghull",
+                "addressRegion": "Merseyside",
+                "postalCode": "L31 2HN",
+                "addressCountry": "GB"
+              },
+              "areaServed": {
+                "@type": "AdministrativeArea",
+                "name": "Liverpool and the North West"
+              },
+              "description":
+                "Northway Engineering provides structural steel fabrication, composite gates, fencing, balustrades, steel and glass doors and gate automation across Liverpool and the North West."
+            })
+          }}
+        />
       </Head>
 
       <Header />
@@ -41,7 +73,7 @@ export default function Home() {
                 Request a quote
               </a>
               <a
-                href="#projects"
+                href="/#projects"
                 className="inline-block border border-slate-300 px-6 py-3 rounded text-sm"
               >
                 View projects
@@ -273,4 +305,3 @@ export default function Home() {
     </>
   );
 }
-
