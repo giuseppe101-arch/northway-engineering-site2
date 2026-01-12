@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
@@ -7,10 +8,10 @@ export default function CompositeFencingPage() {
   return (
     <>
       <Head>
-        <title>Composite Fencing — Northway Engineering</title>
+        <title>Composite Fencing Liverpool | Northway Engineering</title>
         <meta
           name="description"
-          content="Composite fencing supplied and installed — modern, low-maintenance fencing with strong posts and a clean finish across Liverpool and the North West."
+          content="Composite fencing in Liverpool & the North West — low-maintenance fencing installed with strong posts and a clean finish. Modern privacy fencing for gardens and boundaries."
         />
       </Head>
 
@@ -23,7 +24,8 @@ export default function CompositeFencingPage() {
           <p className="mt-4 text-gray-600 max-w-2xl">
             Composite fencing is a smart alternative to timber — it looks great, offers privacy,
             and needs minimal upkeep. We supply and install composite fencing with solid posts and
-            tidy finishing details to suit your garden, boundary or commercial site.
+            tidy finishing details across <strong>Liverpool</strong>, <strong>Merseyside</strong>{" "}
+            and the <strong>North West</strong>.
           </p>
 
           {/* TOP GALLERY (3 images) */}
@@ -32,7 +34,7 @@ export default function CompositeFencingPage() {
             <div className="relative w-full h-72 rounded-2xl overflow-hidden shadow-sm md:col-span-2">
               <Image
                 src="/images/compfence1.jpg"
-                alt="Composite fencing installation"
+                alt="Composite fencing installation in Liverpool"
                 fill
                 sizes="(max-width: 768px) 100vw, 66vw"
                 className="object-cover object-top"
@@ -43,7 +45,7 @@ export default function CompositeFencingPage() {
             <div className="relative w-full h-72 rounded-2xl overflow-hidden shadow-sm">
               <Image
                 src="/images/compfence2.jpg"
-                alt="Composite fence panels"
+                alt="Composite fence panels and posts"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover object-top"
@@ -53,7 +55,7 @@ export default function CompositeFencingPage() {
             <div className="relative w-full h-72 rounded-2xl overflow-hidden shadow-sm md:col-span-3">
               <Image
                 src="/images/compfence3.jpg"
-                alt="Composite fencing finished look"
+                alt="Composite fencing finished look and privacy screening"
                 fill
                 sizes="(max-width: 768px) 100vw, 100vw"
                 className="object-cover"
@@ -64,7 +66,12 @@ export default function CompositeFencingPage() {
 
         {/* INFO CARDS */}
         <section className="max-w-5xl mx-auto px-6 pb-16">
-          <h2 className="text-2xl font-bold">Why composite fencing?</h2>
+          <h2 className="text-2xl font-bold">Composite fencing for modern boundaries</h2>
+          <p className="mt-3 text-gray-600 max-w-3xl">
+            Whether you need a clean boundary line, more privacy, or a long-lasting alternative to
+            timber, composite fencing is a great option. We install straight runs with solid posts,
+            tidy trims and a crisp finish.
+          </p>
 
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             <div className="bg-white rounded-2xl p-6 shadow-sm">
@@ -98,6 +105,26 @@ export default function CompositeFencingPage() {
               </p>
             </div>
           </div>
+
+          {/* INTERNAL LINKS */}
+          <div className="mt-10 bg-white rounded-2xl p-6 shadow-sm">
+            <h2 className="text-xl font-bold">Related services</h2>
+            <p className="mt-2 text-gray-600">
+              Many customers combine fencing with{" "}
+              <Link href="/products/composite-gates" className="underline">
+                composite gates
+              </Link>{" "}
+              for a matching entrance. If you want powered access, we also provide{" "}
+              <Link href="/products/gate-automation" className="underline">
+                gate automation
+              </Link>
+              . For structural work and frames, see{" "}
+              <Link href="/products/structural-steel" className="underline">
+                structural steel
+              </Link>
+              .
+            </p>
+          </div>
         </section>
 
         {/* SECOND GALLERY + MORE TEXT */}
@@ -115,7 +142,7 @@ export default function CompositeFencingPage() {
               <div className="relative w-full h-64 rounded-2xl overflow-hidden shadow-sm md:col-span-2">
                 <Image
                   src="/images/compfence4.jpg"
-                  alt="Composite fence run"
+                  alt="Composite fencing run installed with straight lines"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
@@ -125,7 +152,7 @@ export default function CompositeFencingPage() {
               <div className="relative w-full h-64 rounded-2xl overflow-hidden shadow-sm">
                 <Image
                   src="/images/compfence5.jpg"
-                  alt="Composite fencing detail"
+                  alt="Composite fencing detail close-up"
                   fill
                   sizes="(max-width: 768px) 100vw, 25vw"
                   className="object-cover"
@@ -135,7 +162,7 @@ export default function CompositeFencingPage() {
               <div className="relative w-full h-64 rounded-2xl overflow-hidden shadow-sm">
                 <Image
                   src="/images/compfence7.jpg"
-                  alt="Composite fence corner detail"
+                  alt="Composite fencing corner detail and trim finish"
                   fill
                   sizes="(max-width: 768px) 100vw, 25vw"
                   className="object-cover"
@@ -145,12 +172,66 @@ export default function CompositeFencingPage() {
               <div className="relative w-full h-64 rounded-2xl overflow-hidden shadow-sm md:col-span-4">
                 <Image
                   src="/images/compfence8.jpg"
-                  alt="Composite fencing completed installation"
+                  alt="Completed composite fencing installation for privacy"
                   fill
                   sizes="(max-width: 768px) 100vw, 100vw"
                   className="object-cover"
                 />
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="bg-white">
+          <div className="max-w-5xl mx-auto px-6 pb-16">
+            <h2 className="text-2xl font-bold">Composite fencing FAQs</h2>
+
+            <div className="mt-8 space-y-4">
+              <details className="bg-gray-50 rounded-2xl p-6 shadow-sm">
+                <summary className="font-semibold cursor-pointer">
+                  How long does composite fencing last?
+                </summary>
+                <p className="mt-3 text-gray-600">
+                  Composite fencing is designed for long-term outdoor use and won’t rot like timber.
+                  With proper posts and a tidy install, it’s a strong, low-maintenance option for
+                  gardens and boundaries.
+                </p>
+              </details>
+
+              <details className="bg-gray-50 rounded-2xl p-6 shadow-sm">
+                <summary className="font-semibold cursor-pointer">
+                  Can you remove my old fencing and install new composite?
+                </summary>
+                <p className="mt-3 text-gray-600">
+                  Yes — we can remove existing panels and posts, prep the line, and install the new
+                  composite system with straight runs and clean finishing trims.
+                </p>
+              </details>
+
+              <details className="bg-gray-50 rounded-2xl p-6 shadow-sm">
+                <summary className="font-semibold cursor-pointer">
+                  Can fencing be matched with composite gates?
+                </summary>
+                <p className="mt-3 text-gray-600">
+                  Yes. We can match colours and styles so your fencing works perfectly with{" "}
+                  <Link href="/products/composite-gates" className="underline">
+                    composite gates
+                  </Link>{" "}
+                  for a consistent entrance and boundary look.
+                </p>
+              </details>
+
+              <details className="bg-gray-50 rounded-2xl p-6 shadow-sm">
+                <summary className="font-semibold cursor-pointer">
+                  What do you need for an accurate quote?
+                </summary>
+                <p className="mt-3 text-gray-600">
+                  Photos of the area, the approximate length to be fenced, preferred height, and any
+                  obstacles (steps, slopes, corners). If you want matching gates, include photos of
+                  the entrance too.
+                </p>
+              </details>
             </div>
           </div>
         </section>
