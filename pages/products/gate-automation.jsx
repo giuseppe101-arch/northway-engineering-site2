@@ -35,7 +35,7 @@ export default function GateAutomationPage() {
                 alt="Automatic gate installation in Liverpool"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover object-top"
+                className="object-cover object-center"
                 priority
               />
             </div>
@@ -46,7 +46,7 @@ export default function GateAutomationPage() {
                 alt="Gate automation access control and safety setup"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover object-top"
+                className="object-cover object-center"
               />
             </div>
           </div>
@@ -192,4 +192,3 @@ export default function GateAutomationPage() {
     </>
   );
 }
-
