@@ -87,23 +87,25 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Card 2 — UPDATED IMAGE */}
-              <div className="rounded-lg overflow-hidden shadow">
-                <div className="relative w-full h-48">
-                  <Image
-                    src="/images/glassdoor4.jpg"   {/* ✅ CHANGED */}
-                    alt="Crittall Style Doors & Screens by Northway Engineering"
-                    fill
-                    className="object-cover object-top"
-                  />
-                </div>
-                <div className="p-4">
-                  <h4 className="font-semibold">Crittall-Style Doors</h4>
-                  <p className="text-sm text-gray-600 mt-2">
-                    Slimline steel-framed doors and screens to suit the modern home/business.
-                  </p>
-                </div>
-              </div>
+             {/* Card 2 */}
+<div className="rounded-lg overflow-hidden shadow">
+  <div className="relative w-full h-48">
+    {/* Updated image for the card only */}
+    <Image
+      src="/images/glassdoor4.jpg"
+      alt="Crittall Style Doors & Screens by Northway Engineering"
+      fill
+      className="object-cover object-top"
+    />
+  </div>
+  <div className="p-4">
+    <h4 className="font-semibold">Crittall-Style Doors</h4>
+    <p className="text-sm text-gray-600 mt-2">
+      Slimline steel-framed doors and screens to suit the modern home/business.
+    </p>
+  </div>
+</div>
+
 
               {/* Card 3 */}
               <div className="rounded-lg overflow-hidden shadow">
