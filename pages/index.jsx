@@ -1,16 +1,19 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import { SITE } from '../siteConfig'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import { SITE } from "../siteConfig";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>{SITE.name} — Steel fabrication & engineering</title>
-        <meta name="description" content={SITE.description} />
+        <title>Steel Fabrication Liverpool | Northway Engineering</title>
+        <meta
+          name="description"
+          content="Northway Engineering provides structural steel fabrication, composite gates, fencing, balustrades and gate automation across Liverpool and the North West."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
@@ -21,9 +24,14 @@ export default function Home() {
         <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-4xl font-extrabold">
-              Engineered Steel. Expertly Fabricated.
+              Steel Fabrication &amp; Engineering in Liverpool
             </h1>
-            <p className="mt-6 text-gray-600 max-w-xl">{SITE.description}</p>
+
+            <p className="mt-6 text-gray-600 max-w-xl">
+              Northway Engineering specialises in bespoke steel fabrication for
+              residential and commercial projects across Liverpool, Merseyside
+              and the North West.
+            </p>
 
             <div className="mt-8 flex gap-4">
               <a
@@ -47,7 +55,7 @@ export default function Home() {
               </div>
               <div>
                 <strong>Certifications</strong>
-                <div>ISO 9001 · Welding codes (EN/BS / AWS options)</div>
+                <div>ISO 9001 · EN / BS welding standards</div>
               </div>
             </div>
           </div>
@@ -55,9 +63,10 @@ export default function Home() {
           <div className="rounded-lg overflow-hidden shadow-lg relative w-full h-80">
             <Image
               src="/images/crittall-doors.jpg"
-              alt="Crittall style steel doors by Northway Engineering"
+              alt="Steel fabrication and crittall-style doors in Liverpool"
               fill
               className="object-cover"
+              priority
             />
           </div>
         </section>
@@ -68,57 +77,53 @@ export default function Home() {
             <h2 className="text-2xl font-bold">Selected projects</h2>
 
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-6">
-              {/* Card 1 */}
               <div className="rounded-lg overflow-hidden shadow">
                 <div className="relative w-full h-48">
                   <Image
                     src="/images/composite-gate.jpg"
-                    alt="Composite Gates by Northway Engineering"
+                    alt="Composite steel gates Liverpool"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="p-4">
-                  <h4 className="font-semibold">Composite &amp; Steel Gates</h4>
+                  <h3 className="font-semibold">Composite &amp; Steel Gates</h3>
                   <p className="text-sm text-gray-600 mt-2">
-                    Bespoke steel frames with low-maintenance composite board infills.
+                    Bespoke steel-framed composite gates manufactured and installed.
                   </p>
                 </div>
               </div>
 
-              {/* Card 2 */}
               <div className="rounded-lg overflow-hidden shadow">
                 <div className="relative w-full h-48">
                   <Image
                     src="/images/glassdoor4.jpg"
-                    alt="Crittall Style Doors & Screens by Northway Engineering"
+                    alt="Crittall-style steel and glass doors"
                     fill
                     className="object-cover object-top"
                   />
                 </div>
                 <div className="p-4">
-                  <h4 className="font-semibold">Crittall-Style Doors</h4>
+                  <h3 className="font-semibold">Steel &amp; Glass Doors</h3>
                   <p className="text-sm text-gray-600 mt-2">
-                    Slimline steel-framed doors and screens to suit the modern home/business.
+                    Slimline steel and glass doors and partitions.
                   </p>
                 </div>
               </div>
 
-              {/* Card 3 */}
               <div className="rounded-lg overflow-hidden shadow">
                 <div className="relative w-full h-48">
                   <Image
                     src="/images/wrought-iron-gate.jpg"
-                    alt="Wrought iron gate installation by Northway Engineering"
+                    alt="Structural steel fabrication Liverpool"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="p-4">
-                  <h4 className="font-semibold">Structural &amp; Architectural Steel</h4>
+                  <h3 className="font-semibold">Structural Steel</h3>
                   <p className="text-sm text-gray-600 mt-2">
-                    Frames, balconies, staircases and bespoke fabrications to suit your
-                    project.
+                    Beams, frames, balconies and bespoke fabrications.
                   </p>
                 </div>
               </div>
@@ -130,76 +135,87 @@ export default function Home() {
         <section id="services" className="max-w-6xl mx-auto px-6 py-12">
           <h2 className="text-2xl font-bold">Our services</h2>
           <p className="mt-2 text-gray-600">
-            Design, fabrication and installation of bespoke steelwork for homes and
-            businesses across the North West.
+            Design, fabrication and installation of bespoke steelwork across
+            Liverpool and the North West.
           </p>
 
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link
-              href="/products/composite-gates"
-              className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition"
-            >
+            <Link href="/products/composite-gates" className="bg-white rounded-lg p-6 shadow-sm block">
               <h3 className="font-semibold text-lg">Composite Gates</h3>
               <p className="mt-3 text-gray-600 text-sm">
-                Bespoke steel frames with low-maintenance composite infills. Driveway,
-                side and pedestrian gates made to measure.
+                Made-to-measure steel-framed composite gates.
               </p>
             </Link>
 
-            <Link
-              href="/products/composite-fencing"
-              className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition"
-            >
+            <Link href="/products/composite-fencing" className="bg-white rounded-lg p-6 shadow-sm block">
               <h3 className="font-semibold text-lg">Composite Fencing</h3>
               <p className="mt-3 text-gray-600 text-sm">
-                Steel posts and rails with composite boards for a modern, low-maintenance
-                boundary that won’t rot or warp.
+                Modern, low-maintenance fencing systems.
               </p>
             </Link>
 
-            <Link
-              href="/products/crittall-doors"
-              className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition"
-            >
-              <h3 className="font-semibold text-lg">Steel &amp; Glass Crittall Doors</h3>
+            <Link href="/products/crittall-doors" className="bg-white rounded-lg p-6 shadow-sm block">
+              <h3 className="font-semibold text-lg">Steel &amp; Glass Doors</h3>
               <p className="mt-3 text-gray-600 text-sm">
-                Slimline steel-framed doors and screens with safety glass for kitchens,
-                extensions and internal room dividers.
+                Crittall-style doors and internal screens.
               </p>
             </Link>
 
-            <Link
-              href="/products/balustrade"
-              className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition"
-            >
-              <h3 className="font-semibold text-lg">Balustrade</h3>
+            <Link href="/products/balustrade" className="bg-white rounded-lg p-6 shadow-sm block">
+              <h3 className="font-semibold text-lg">Balustrades</h3>
               <p className="mt-3 text-gray-600 text-sm">
-                Internal and external balustrades in steel and glass. Stairs, landings,
-                balconies and terrace guarding to current regs.
+                Steel and glass balustrades for stairs and balconies.
               </p>
             </Link>
 
-            <Link
-              href="/products/structural-steel"
-              className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition"
-            >
+            <Link href="/products/structural-steel" className="bg-white rounded-lg p-6 shadow-sm block">
               <h3 className="font-semibold text-lg">Structural Steel</h3>
               <p className="mt-3 text-gray-600 text-sm">
-                Beams, posts, frames and mezzanines supplied and installed from
-                engineer’s drawings, including lifting where required.
+                RSJs, beams and fabricated steel frames.
               </p>
             </Link>
 
-            <Link
-              href="/products/gate-automation"
-              className="bg-white rounded-lg p-6 shadow-sm block hover:shadow-md transition"
-            >
+            <Link href="/products/gate-automation" className="bg-white rounded-lg p-6 shadow-sm block">
               <h3 className="font-semibold text-lg">Gate Automation</h3>
               <p className="mt-3 text-gray-600 text-sm">
-                Swing and sliding gate automation with access control. Automation for new
-                installations or existing gates.
+                Automated swing and sliding gate systems.
               </p>
             </Link>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="max-w-6xl mx-auto px-6 py-12">
+          <h2 className="text-2xl font-bold">Frequently asked questions</h2>
+
+          <div className="mt-6 space-y-4">
+            <div>
+              <h3 className="font-semibold">
+                Do you cover Liverpool and the North West?
+              </h3>
+              <p className="text-gray-600 mt-1">
+                Yes — we regularly work across Liverpool, Merseyside and the wider
+                North West.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold">
+                Do you supply and install steelwork?
+              </h3>
+              <p className="text-gray-600 mt-1">
+                We provide fabrication and on-site installation where required.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold">
+                Can you work from engineer’s drawings?
+              </h3>
+              <p className="text-gray-600 mt-1">
+                Yes — we regularly fabricate steelwork from structural drawings.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -209,8 +225,8 @@ export default function Home() {
             <div>
               <h2 className="text-2xl font-bold">Get an accurate quote</h2>
               <p className="mt-3 text-gray-600">
-                Send drawings or project details and we’ll respond with a costed quote
-                and lead time.
+                Send drawings or project details and we’ll respond with pricing
+                and lead times.
               </p>
 
               <dl className="mt-6 text-sm text-gray-700">
@@ -237,39 +253,15 @@ export default function Home() {
               />
 
               <label className="block text-sm font-medium">Name</label>
-              <input
-                name="name"
-                required
-                className="mt-1 block w-full border border-gray-200 rounded px-3 py-2"
-              />
-
-              <label className="block text-sm font-medium mt-4">Company</label>
-              <input
-                name="company"
-                className="mt-1 block w-full border border-gray-200 rounded px-3 py-2"
-              />
+              <input name="name" required className="mt-1 block w-full border rounded px-3 py-2" />
 
               <label className="block text-sm font-medium mt-4">Email</label>
-              <input
-                name="email"
-                type="email"
-                required
-                className="mt-1 block w-full border border-gray-200 rounded px-3 py-2"
-              />
+              <input name="email" type="email" required className="mt-1 block w-full border rounded px-3 py-2" />
 
-              <label className="block text-sm font-medium mt-4">
-                Project details / message
-              </label>
-              <textarea
-                name="message"
-                rows={5}
-                className="mt-1 block w-full border border-gray-200 rounded px-3 py-2"
-              />
+              <label className="block text-sm font-medium mt-4">Message</label>
+              <textarea name="message" rows={5} className="mt-1 block w-full border rounded px-3 py-2" />
 
-              <button
-                type="submit"
-                className="mt-6 bg-slate-800 text-white px-5 py-3 rounded"
-              >
+              <button type="submit" className="mt-6 bg-slate-800 text-white px-5 py-3 rounded">
                 Send enquiry
               </button>
             </form>
@@ -279,6 +271,6 @@ export default function Home() {
 
       <Footer />
     </>
-  )
+  );
 }
 
