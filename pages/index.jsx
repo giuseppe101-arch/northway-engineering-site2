@@ -21,7 +21,7 @@ export default function Home() {
         <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-4xl font-extrabold">
-              Precision steel fabrication everytime
+              Engineered steel. Expertly fabricated.
             </h1>
             <p className="mt-6 text-gray-600 max-w-xl">{SITE.description}</p>
 
