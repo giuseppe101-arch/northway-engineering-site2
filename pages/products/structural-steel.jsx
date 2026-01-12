@@ -28,6 +28,7 @@ export default function StructuralSteelPage() {
 
           {/* IMAGE GRID */}
           <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {/* IMAGE 1 – FEATURE */}
             <div className="relative w-full h-72 rounded-2xl overflow-hidden shadow-sm md:col-span-2">
               <Image
                 src="/images/steel1.jpg"
@@ -39,6 +40,7 @@ export default function StructuralSteelPage() {
               />
             </div>
 
+            {/* IMAGE 2 */}
             <div className="relative w-full h-72 rounded-2xl overflow-hidden shadow-sm">
               <Image
                 src="/images/steel2.jpg"
@@ -49,6 +51,7 @@ export default function StructuralSteelPage() {
               />
             </div>
 
+            {/* IMAGE 3 */}
             <div className="relative w-full h-72 rounded-2xl overflow-hidden shadow-sm">
               <Image
                 src="/images/steel3.jpg"
@@ -59,20 +62,11 @@ export default function StructuralSteelPage() {
               />
             </div>
 
+            {/* IMAGE 4 */}
             <div className="relative w-full h-72 rounded-2xl overflow-hidden shadow-sm">
               <Image
                 src="/images/steel4.jpg"
                 alt="Fabricated steel frame"
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-cover"
-              />
-            </div>
-
-            <div className="relative w-full h-72 rounded-2xl overflow-hidden shadow-sm">
-              <Image
-                src="/images/steel5.jpg"
-                alt="On-site structural steel installation"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover"
@@ -152,3 +146,4 @@ export default function StructuralSteelPage() {
     </>
   );
 }
+
