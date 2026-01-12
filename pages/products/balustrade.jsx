@@ -40,17 +40,6 @@ export default function BalustradesPage() {
               />
             </div>
 
-            {/* IMAGE 2 */}
-            <div className="relative w-full h-72 rounded-2xl overflow-hidden shadow-sm">
-              <Image
-                src="/images/bal2.jpg"
-                alt="Stair balustrade"
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-cover"
-              />
-            </div>
-
             {/* IMAGE 3 */}
             <div className="relative w-full h-72 rounded-2xl overflow-hidden shadow-sm">
               <Image
