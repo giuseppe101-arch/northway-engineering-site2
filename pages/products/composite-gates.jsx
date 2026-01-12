@@ -35,19 +35,19 @@ export default function CompositeGatesPage() {
                 alt="Composite gate installation"
                 fill
                 sizes="(max-width: 768px) 100vw, 66vw"
-                className="object-cover"
+                className="object-cover object-top"
                 priority
               />
             </div>
 
-            {/* IMAGE 2 */}
+            {/* TOP RIGHT IMAGE */}
             <div className="relative w-full h-72 rounded-2xl overflow-hidden shadow-sm">
               <Image
                 src="/images/compgate9.jpg"
                 alt="Composite driveway gates"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
 
@@ -154,5 +154,3 @@ export default function CompositeGatesPage() {
     </>
   );
 }
-
-
