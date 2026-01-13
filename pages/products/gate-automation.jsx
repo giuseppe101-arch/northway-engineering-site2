@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema";
 
 export default function GateAutomationPage() {
   // FAQ schema must match visible FAQ content on the page
@@ -64,6 +65,18 @@ export default function GateAutomationPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
         />
       </Head>
+
+      {/* Breadcrumb Schema */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", item: "https://www.northwayengineering.co.uk/" },
+          { name: "Products", item: "https://www.northwayengineering.co.uk/#services" },
+          {
+            name: "Gate Automation",
+            item: "https://www.northwayengineering.co.uk/products/gate-automation",
+          },
+        ]}
+      />
 
       <Header />
 
@@ -243,3 +256,4 @@ export default function GateAutomationPage() {
   );
 }
 
+              
