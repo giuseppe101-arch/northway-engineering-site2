@@ -5,6 +5,50 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export default function CompositeGatesPage() {
+  // FAQ schema must match visible FAQ content on the page
+  const FAQ_SCHEMA = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Do composite gates need much maintenance?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Very little. Composite boards don’t rot and usually only need an occasional wash. We still build strong steel frames and fit quality hinges and latches so the gate operates smoothly over time.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can you make gates to match my composite fencing?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes — we can match styles and colours so your gates and fencing look consistent. Send a photo of what you’ve got (or what you like) and we’ll advise the best setup.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can composite gates be automated?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes. We can build gates with the correct bracing, hinge layout and clearances for automation, and we also provide gate automation across Liverpool and the North West.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What do you need to provide a quote?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Photos of the opening, rough width/height, whether it’s a driveway or side access, and the style you like (full privacy, slatted, colour choice). If you want automation, mention your preferred access method (keypad, fobs, intercom or GSM).",
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <Head>
@@ -12,6 +56,12 @@ export default function CompositeGatesPage() {
         <meta
           name="description"
           content="Composite gates in Liverpool & the North West — made-to-measure steel frames with composite infills. Driveway, side and pedestrian gates, automation-ready."
+        />
+
+        {/* FAQ Schema for Rich Results */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
         />
       </Head>
 
