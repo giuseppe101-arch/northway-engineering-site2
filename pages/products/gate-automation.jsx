@@ -5,6 +5,50 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export default function GateAutomationPage() {
+  // FAQ schema must match visible FAQ content on the page
+  const FAQ_SCHEMA = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Can you automate my existing gates?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "In many cases, yes. We’ll check the gate condition, hinge layout, weight and swing/slide clearances, then recommend a suitable system and any strengthening needed for a safe, reliable install.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What safety systems do automatic gates need?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Most setups use a combination of safety devices such as photocells, safety edges and force settings. We’ll advise the right options for your entrance and usage.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you cover Liverpool and the wider North West?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes — we regularly work across Liverpool, Merseyside and the North West. Send your postcode and a couple of photos and we’ll advise next steps.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What do you need for an accurate quote?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Photos of the entrance, rough opening width, whether it’s swing or sliding, and your preferred access method (keypad, fobs, intercom or GSM). If it’s a repair, describe the fault and any error lights/beeps.",
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <Head>
@@ -12,6 +56,12 @@ export default function GateAutomationPage() {
         <meta
           name="description"
           content="Gate automation in Liverpool & the North West — installation, repairs and upgrades for swing/sliding gates, access control and safety systems."
+        />
+
+        {/* FAQ Schema for Rich Results */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
         />
       </Head>
 
@@ -192,3 +242,4 @@ export default function GateAutomationPage() {
     </>
   );
 }
+
