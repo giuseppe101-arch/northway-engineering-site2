@@ -6,6 +6,83 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default function Home() {
+  // --- Structured data (must match visible page content) ---
+
+  const LOCAL_BUSINESS_SCHEMA = {
+    "@context": "https://schema.org",
+    "@type": "ConstructionBusiness",
+    name: "Northway Engineering",
+    url: "https://www.northwayengineering.co.uk",
+    logo: "https://www.northwayengineering.co.uk/images/logo.jpg",
+    telephone: "07557237196",
+    email: "northwayengineeringltd@gmail.com",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Liverpool Road North",
+      addressLocality: "Maghull",
+      addressRegion: "Merseyside",
+      postalCode: "L31 2HN",
+      addressCountry: "GB",
+    },
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: "Liverpool and the North West",
+    },
+    description:
+      "Northway Engineering provides structural steel fabrication, composite gates, fencing, balustrades, steel and glass doors and gate automation across Liverpool and the North West.",
+  };
+
+  const ORGANIZATION_SCHEMA = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Northway Engineering",
+    url: "https://www.northwayengineering.co.uk",
+    logo: "https://www.northwayengineering.co.uk/images/logo.jpg",
+    email: "northwayengineeringltd@gmail.com",
+    telephone: "07557237196",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Liverpool Road North",
+      addressLocality: "Maghull",
+      addressRegion: "Merseyside",
+      postalCode: "L31 2HN",
+      addressCountry: "GB",
+    },
+  };
+
+  // Homepage FAQ schema MUST match the visible FAQ section content
+  const FAQ_SCHEMA = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Do you cover Liverpool and the North West?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes — we regularly work across Liverpool, Merseyside and the wider North West.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you supply and install steelwork?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We provide fabrication and on-site installation where required.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can you work from engineer’s drawings?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes — we regularly fabricate steelwork from structural drawings.",
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <Head>
@@ -18,34 +95,22 @@ export default function Home() {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        {/* Structured data for Google (Local Business) */}
+        {/* Local Business schema */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "ConstructionBusiness",
-              "name": "Northway Engineering",
-              "url": "https://www.northwayengineering.co.uk",
-              "logo": "https://www.northwayengineering.co.uk/images/logo.jpg",
-              "telephone": "07557237196",
-              "email": "northwayengineeringltd@gmail.com",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Liverpool Road North",
-                "addressLocality": "Maghull",
-                "addressRegion": "Merseyside",
-                "postalCode": "L31 2HN",
-                "addressCountry": "GB"
-              },
-              "areaServed": {
-                "@type": "AdministrativeArea",
-                "name": "Liverpool and the North West"
-              },
-              "description":
-                "Northway Engineering provides structural steel fabrication, composite gates, fencing, balustrades, steel and glass doors and gate automation across Liverpool and the North West."
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }}
+        />
+
+        {/* Organization schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_SCHEMA) }}
+        />
+
+        {/* FAQ schema (homepage FAQs) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
         />
       </Head>
 
@@ -78,17 +143,6 @@ export default function Home() {
               >
                 View projects
               </a>
-            </div>
-
-            <div className="mt-8 grid grid-cols-2 gap-4 text-sm text-gray-600">
-              <div>
-                <strong>Capacity</strong>
-                <div>Up to 12m beams · 10t crane capacity</div>
-              </div>
-              <div>
-                <strong>Certifications</strong>
-                <div>ISO 9001 · EN / BS welding standards</div>
-              </div>
             </div>
           </div>
 
