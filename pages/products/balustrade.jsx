@@ -50,6 +50,26 @@ export default function BalustradesPage() {
     ],
   };
 
+  // Service schema (per-page)
+  const SERVICE_SCHEMA = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Balustrades",
+    serviceType: "Steel and glass balustrades for stairs, landings, balconies and terraces",
+    provider: {
+      "@type": "ConstructionBusiness",
+      name: "Northway Engineering",
+      url: "https://www.northwayengineering.co.uk",
+    },
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: "Liverpool and the North West",
+    },
+    url: "https://www.northwayengineering.co.uk/products/balustrade",
+    description:
+      "Balustrades in Liverpool & the North West — steel and glass balustrades for stairs, landings, balconies and terraces. Made to measure with a clean, safe finish.",
+  };
+
   return (
     <>
       <Head>
@@ -64,13 +84,19 @@ export default function BalustradesPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
         />
+
+        {/* Service Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }}
+        />
       </Head>
 
       {/* Breadcrumb Schema */}
       <BreadcrumbSchema
         items={[
           { name: "Home", item: "https://www.northwayengineering.co.uk/" },
-          { name: "Products", item: "https://www.northwayengineering.co.uk/#services" },
+          { name: "Services", item: "https://www.northwayengineering.co.uk/#services" },
           {
             name: "Balustrades",
             item: "https://www.northwayengineering.co.uk/products/balustrade",
@@ -291,3 +317,4 @@ export default function BalustradesPage() {
     </>
   );
 }
+
