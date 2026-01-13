@@ -6,6 +6,9 @@ import Footer from "../../components/Footer";
 import BreadcrumbSchema from "../../components/BreadcrumbSchema";
 
 export default function StructuralSteelPage() {
+  // JSON-LD helper (prevents rare </script> edge-cases)
+  const toJsonLd = (obj) => JSON.stringify(obj).replace(/<\/script>/g, "<\\/script>");
+
   // FAQ schema must match visible FAQ content on the page
   const FAQ_SCHEMA = {
     "@context": "https://schema.org",
@@ -57,7 +60,7 @@ export default function StructuralSteelPage() {
     name: "Structural Steel Fabrication & Installation",
     serviceType: "Structural steel fabrication and installation",
     provider: {
-      "@type": "ConstructionBusiness",
+      "@type": "HomeAndConstructionBusiness",
       name: "Northway Engineering",
       url: "https://www.northwayengineering.co.uk",
     },
@@ -78,17 +81,23 @@ export default function StructuralSteelPage() {
           name="description"
           content="Structural steel fabrication in Liverpool & the North West — beams/RSJs, goalposts and frames made to drawings with safe installation for domestic and commercial projects."
         />
+        <link
+          rel="canonical"
+          href="https://www.northwayengineering.co.uk/products/structural-steel"
+        />
 
         {/* FAQ Schema for Rich Results */}
         <script
+          id="ld-faq-structural"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
+          dangerouslySetInnerHTML={{ __html: toJsonLd(FAQ_SCHEMA) }}
         />
 
         {/* Service Schema */}
         <script
+          id="ld-service-structural"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }}
+          dangerouslySetInnerHTML={{ __html: toJsonLd(SERVICE_SCHEMA) }}
         />
       </Head>
 
@@ -169,7 +178,7 @@ export default function StructuralSteelPage() {
         {/* WHAT WE DO */}
         <section className="max-w-5xl mx-auto px-6 pb-16">
           <h2 className="text-2xl font-bold">Structural steel fabrication &amp; installation</h2>
-          <p className="mt-3 text-gray-600 max-w-3xl>
+          <p className="mt-3 text-gray-600 max-w-3xl">
             We supply and fit beams, posts and frames for extensions, loft conversions, knock-throughs
             and structural alterations. Work is completed to engineer’s drawings, with clear
             communication and safe installation on site.
