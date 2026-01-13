@@ -6,6 +6,9 @@ import Footer from "../../components/Footer";
 import BreadcrumbSchema from "../../components/BreadcrumbSchema";
 
 export default function SteelAndGlassCrittallPage() {
+  // JSON-LD helper (prevents rare </script> edge-cases)
+  const toJsonLd = (obj) => JSON.stringify(obj).replace(/<\/script>/g, "<\\/script>");
+
   // FAQ schema must match visible FAQ content on the page
   const FAQ_SCHEMA = {
     "@context": "https://schema.org",
@@ -13,7 +16,7 @@ export default function SteelAndGlassCrittallPage() {
     mainEntity: [
       {
         "@type": "Question",
-        name: 'Are these “real Crittall” doors?',
+        name: "Are these real Crittall doors?",
         acceptedAnswer: {
           "@type": "Answer",
           text:
@@ -57,7 +60,7 @@ export default function SteelAndGlassCrittallPage() {
     name: "Crittall-Style Steel & Glass Doors",
     serviceType: "Steel and glass doors, screens and partitions",
     provider: {
-      "@type": "ConstructionBusiness",
+      "@type": "HomeAndConstructionBusiness",
       name: "Northway Engineering",
       url: "https://www.northwayengineering.co.uk",
     },
@@ -78,17 +81,23 @@ export default function SteelAndGlassCrittallPage() {
           name="description"
           content="Crittall-style steel & glass doors in Liverpool & the North West — made-to-measure internal doors, screens and partitions with quality finishes and glazing options."
         />
+        <link
+          rel="canonical"
+          href="https://www.northwayengineering.co.uk/products/crittall-doors"
+        />
 
         {/* FAQ Schema for Rich Results */}
         <script
+          id="ld-faq-crittall"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
+          dangerouslySetInnerHTML={{ __html: toJsonLd(FAQ_SCHEMA) }}
         />
 
         {/* Service Schema */}
         <script
+          id="ld-service-crittall"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }}
+          dangerouslySetInnerHTML={{ __html: toJsonLd(SERVICE_SCHEMA) }}
         />
       </Head>
 
@@ -223,7 +232,7 @@ export default function SteelAndGlassCrittallPage() {
             <div className="mt-8 space-y-4">
               <details className="bg-gray-50 rounded-2xl p-6 shadow-sm">
                 <summary className="font-semibold cursor-pointer">
-                  Are these “real Crittall” doors?
+                  Are these real Crittall doors?
                 </summary>
                 <p className="mt-3 text-gray-600">
                   We manufacture Crittall-style steel and glass doors and partitions — slimline,
@@ -299,4 +308,3 @@ export default function SteelAndGlassCrittallPage() {
     </>
   );
 }
-
