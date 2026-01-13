@@ -50,6 +50,26 @@ export default function StructuralSteelPage() {
     ],
   };
 
+  // Service schema (per-page)
+  const SERVICE_SCHEMA = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Structural Steel Fabrication & Installation",
+    serviceType: "Structural steel fabrication and installation",
+    provider: {
+      "@type": "ConstructionBusiness",
+      name: "Northway Engineering",
+      url: "https://www.northwayengineering.co.uk",
+    },
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: "Liverpool and the North West",
+    },
+    url: "https://www.northwayengineering.co.uk/products/structural-steel",
+    description:
+      "Structural steel fabrication in Liverpool and the North West — beams/RSJs, goalposts and frames made to drawings with safe installation for domestic and commercial projects.",
+  };
+
   return (
     <>
       <Head>
@@ -64,13 +84,19 @@ export default function StructuralSteelPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
         />
+
+        {/* Service Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }}
+        />
       </Head>
 
       {/* Breadcrumb Schema */}
       <BreadcrumbSchema
         items={[
           { name: "Home", item: "https://www.northwayengineering.co.uk/" },
-          { name: "Products", item: "https://www.northwayengineering.co.uk/#services" },
+          { name: "Services", item: "https://www.northwayengineering.co.uk/#services" },
           {
             name: "Structural Steel",
             item: "https://www.northwayengineering.co.uk/products/structural-steel",
@@ -143,7 +169,7 @@ export default function StructuralSteelPage() {
         {/* WHAT WE DO */}
         <section className="max-w-5xl mx-auto px-6 pb-16">
           <h2 className="text-2xl font-bold">Structural steel fabrication &amp; installation</h2>
-          <p className="mt-3 text-gray-600 max-w-3xl">
+          <p className="mt-3 text-gray-600 max-w-3xl>
             We supply and fit beams, posts and frames for extensions, loft conversions, knock-throughs
             and structural alterations. Work is completed to engineer’s drawings, with clear
             communication and safe installation on site.
@@ -289,3 +315,4 @@ export default function StructuralSteelPage() {
     </>
   );
 }
+
