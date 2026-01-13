@@ -50,6 +50,26 @@ export default function CompositeFencingPage() {
     ],
   };
 
+  // Service schema (per-page)
+  const SERVICE_SCHEMA = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Composite Fencing Supply & Installation",
+    serviceType: "Composite fencing supply and installation",
+    provider: {
+      "@type": "ConstructionBusiness",
+      name: "Northway Engineering",
+      url: "https://www.northwayengineering.co.uk",
+    },
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: "Liverpool and the North West",
+    },
+    url: "https://www.northwayengineering.co.uk/products/composite-fencing",
+    description:
+      "Composite fencing in Liverpool and the North West — low-maintenance fencing installed with strong posts and a clean finish. Modern privacy fencing for gardens and boundaries.",
+  };
+
   return (
     <>
       <Head>
@@ -64,13 +84,19 @@ export default function CompositeFencingPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
         />
+
+        {/* Service Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }}
+        />
       </Head>
 
       {/* Breadcrumb Schema */}
       <BreadcrumbSchema
         items={[
           { name: "Home", item: "https://www.northwayengineering.co.uk/" },
-          { name: "Products", item: "https://www.northwayengineering.co.uk/#services" },
+          { name: "Services", item: "https://www.northwayengineering.co.uk/#services" },
           {
             name: "Composite Fencing",
             item: "https://www.northwayengineering.co.uk/products/composite-fencing",
@@ -332,4 +358,5 @@ export default function CompositeFencingPage() {
     </>
   );
 }
+
 
