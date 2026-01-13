@@ -17,7 +17,7 @@ export default function BalustradesPage() {
         acceptedAnswer: {
           "@type": "Answer",
           text:
-            "We build balustrades with safety and practicality in mind and will advise on key considerations such as height, spacing and suitability for stairs, landings and balconies. If your project has specific requirements, send details and we’ll work to them.",
+            "We build balustrades with safety and practicality in mind and will advise on key considerations such as height, spacing and suitability for stairs, landings and balconies. If your project has specific requirements, send details and we'll work to them.",
         },
       },
       {
@@ -26,7 +26,7 @@ export default function BalustradesPage() {
         acceptedAnswer: {
           "@type": "Answer",
           text:
-            "Yes — we can supply steel posts/handrails with glass infills for a modern, open look. We’ll help you choose the right layout for your space.",
+            "Yes — we can supply steel posts/handrails with glass infills for a modern, open look. We'll help you choose the right layout for your space.",
         },
       },
       {
@@ -44,7 +44,7 @@ export default function BalustradesPage() {
         acceptedAnswer: {
           "@type": "Answer",
           text:
-            "Photos, rough sizes, and where it’s being fitted (stairs, landing, balcony or terrace). If you have a sketch, drawings, or a style reference, send that too.",
+            "Photos, rough sizes, and where it's being fitted (stairs, landing, balcony or terrace). If you have a sketch, drawings, or a style reference, send that too.",
         },
       },
     ],
@@ -55,7 +55,8 @@ export default function BalustradesPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "Balustrades",
-    serviceType: "Steel and glass balustrades for stairs, landings, balconies and terraces",
+    serviceType:
+      "Steel and glass balustrades for stairs, landings, balconies and terraces",
     provider: {
       "@type": "ConstructionBusiness",
       name: "Northway Engineering",
@@ -96,7 +97,10 @@ export default function BalustradesPage() {
       <BreadcrumbSchema
         items={[
           { name: "Home", item: "https://www.northwayengineering.co.uk/" },
-          { name: "Services", item: "https://www.northwayengineering.co.uk/#services" },
+          {
+            name: "Services",
+            item: "https://www.northwayengineering.co.uk/#services",
+          },
           {
             name: "Balustrades",
             item: "https://www.northwayengineering.co.uk/products/balustrade",
@@ -111,10 +115,11 @@ export default function BalustradesPage() {
         <section className="max-w-5xl mx-auto px-6 py-16">
           <h1 className="text-3xl font-bold">Balustrades</h1>
           <p className="mt-4 text-gray-600 max-w-2xl">
-            Internal and external balustrades made to measure in steel and glass across{" "}
-            <strong>Liverpool</strong>, <strong>Merseyside</strong> and the{" "}
-            <strong>North West</strong>. Ideal for stairs, landings, balconies and terrace guarding
-            — designed for safety, clean lines and a long-lasting finish.
+            Internal and external balustrades made to measure in steel and glass
+            across <strong>Liverpool</strong>, <strong>Merseyside</strong> and the{" "}
+            <strong>North West</strong>. Ideal for stairs, landings, balconies and
+            terrace guarding — designed for safety, clean lines and a long-lasting
+            finish.
           </p>
 
           {/* IMAGE GRID */}
@@ -181,9 +186,10 @@ export default function BalustradesPage() {
         <section className="max-w-5xl mx-auto px-6 pb-16">
           <h2 className="text-2xl font-bold">Steel &amp; glass balustrades made to measure</h2>
           <p className="mt-3 text-gray-600 max-w-3xl">
-            We manufacture balustrades to suit your space and layout — whether it’s a staircase,
-            landing, balcony or terrace. You can choose a modern steel and glass look or a more
-            traditional steel design, with durable finishes for interior or exterior use.
+            We manufacture balustrades to suit your space and layout — whether it's
+            a staircase, landing, balcony or terrace. You can choose a modern steel
+            and glass look or a more traditional steel design, with durable finishes
+            for interior or exterior use.
           </p>
 
           <div className="mt-8 grid gap-6 md:grid-cols-2">
@@ -224,7 +230,8 @@ export default function BalustradesPage() {
               <Link href="/products/structural-steel" className="underline">
                 structural steel
               </Link>{" "}
-              work for extensions, stairs and landings. For modern interiors, we also manufacture{" "}
+              work for extensions, stairs and landings. For modern interiors, we
+              also manufacture{" "}
               <Link href="/products/crittall-doors" className="underline">
                 steel &amp; glass (Crittall-style) doors
               </Link>
@@ -244,10 +251,10 @@ export default function BalustradesPage() {
                   Are your balustrades made to current regulations?
                 </summary>
                 <p className="mt-3 text-gray-600">
-                  We build balustrades with safety and practicality in mind and will advise on key
-                  considerations such as height, spacing and suitability for stairs, landings and
-                  balconies. If your project has specific requirements, send details and we’ll
-                  work to them.
+                  We build balustrades with safety and practicality in mind and will
+                  advise on key considerations such as height, spacing and suitability
+                  for stairs, landings and balconies. If your project has specific
+                  requirements, send details and we'll work to them.
                 </p>
               </details>
 
@@ -256,8 +263,9 @@ export default function BalustradesPage() {
                   Can you do glass balustrades for stairs and landings?
                 </summary>
                 <p className="mt-3 text-gray-600">
-                  Yes — we can supply steel posts/handrails with glass infills for a modern, open
-                  look. We’ll help you choose the right layout for your space.
+                  Yes — we can supply steel posts/handrails with glass infills for a
+                  modern, open look. We'll help you choose the right layout for your
+                  space.
                 </p>
               </details>
 
@@ -266,8 +274,8 @@ export default function BalustradesPage() {
                   Do you install external balustrades for balconies and terraces?
                 </summary>
                 <p className="mt-3 text-gray-600">
-                  Yes. External balustrades are finished for durability and installed with a tidy,
-                  secure fixing method suited to the surface and environment.
+                  Yes. External balustrades are finished for durability and installed
+                  with a tidy, secure fixing method suited to the surface and environment.
                 </p>
               </details>
 
@@ -276,8 +284,9 @@ export default function BalustradesPage() {
                   What do you need for an accurate quote?
                 </summary>
                 <p className="mt-3 text-gray-600">
-                  Photos, rough sizes, and where it’s being fitted (stairs, landing, balcony or
-                  terrace). If you have a sketch, drawings, or a style reference, send that too.
+                  Photos, rough sizes, and where it's being fitted (stairs, landing,
+                  balcony or terrace). If you have a sketch, drawings, or a style
+                  reference, send that too.
                 </p>
               </details>
             </div>
@@ -290,8 +299,8 @@ export default function BalustradesPage() {
             <div className="rounded-2xl bg-gray-900 text-white p-8 md:p-10">
               <h2 className="text-2xl font-bold">Need a quote?</h2>
               <p className="mt-3 text-gray-200 max-w-2xl">
-                Send photos, rough sizes and where the balustrade is going (stairs, landing,
-                balcony etc). We’ll advise the best option and price it up.
+                Send photos, rough sizes and where the balustrade is going (stairs,
+                landing, balcony etc). We'll advise the best option and price it up.
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3">
