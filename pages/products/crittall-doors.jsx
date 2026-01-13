@@ -5,6 +5,50 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export default function SteelAndGlassCrittallPage() {
+  // FAQ schema must match visible FAQ content on the page
+  const FAQ_SCHEMA = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: 'Are these “real Crittall” doors?',
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "We manufacture Crittall-style steel and glass doors and partitions — slimline, steel-framed glazing made to measure with the classic industrial look. If you have a reference photo, we can match the style and bar layout.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What glass options can I choose?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Clear glass is common for light, while reeded or obscured glass works well for privacy. We’ll advise the best option depending on where it’s being fitted.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can you make doors with side panels or an overpanel?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes — we regularly build sets with side panels, overpanels and full room dividers to suit larger openings and open-plan spaces.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What do you need for an accurate quote?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Rough opening width/height, a couple of photos, and any ideas you have for layout (single/double doors, side panels, bar pattern). A sketch or inspiration image helps us price it accurately.",
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <Head>
@@ -12,6 +56,12 @@ export default function SteelAndGlassCrittallPage() {
         <meta
           name="description"
           content="Crittall-style steel & glass doors in Liverpool & the North West — made-to-measure internal doors, screens and partitions with quality finishes and glazing options."
+        />
+
+        {/* FAQ Schema for Rich Results */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
         />
       </Head>
 
@@ -208,4 +258,3 @@ export default function SteelAndGlassCrittallPage() {
     </>
   );
 }
-
