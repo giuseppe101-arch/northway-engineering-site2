@@ -61,7 +61,7 @@ export default function Home() {
         acceptedAnswer: {
           "@type": "Answer",
           text:
-            "Yes — we regularly work across Liverpool, Merseyside and the wider North West.",
+            "Yes - we regularly work across Liverpool, Merseyside and the wider North West.",
         },
       },
       {
@@ -74,16 +74,16 @@ export default function Home() {
       },
       {
         "@type": "Question",
-        name: "Can you work from engineer’s drawings?",
+        name: "Can you work from engineer's drawings?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes — we regularly fabricate steelwork from structural drawings.",
+          text: "Yes - we regularly fabricate steelwork from structural drawings.",
         },
       },
     ],
   };
 
-  // NEW: Homepage Services schema (matches the 6 visible service cards)
+  // Homepage Services schema (matches the 6 visible service cards)
   const SERVICES_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -240,7 +240,7 @@ export default function Home() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
         />
 
-        {/* NEW: Services schema (homepage service cards) */}
+        {/* Services schema (homepage service cards) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICES_SCHEMA) }}
@@ -431,7 +431,7 @@ export default function Home() {
                 Do you cover Liverpool and the North West?
               </h3>
               <p className="text-gray-600 mt-1">
-                Yes — we regularly work across Liverpool, Merseyside and the wider
+                Yes - we regularly work across Liverpool, Merseyside and the wider
                 North West.
               </p>
             </div>
@@ -447,10 +447,10 @@ export default function Home() {
 
             <div>
               <h3 className="font-semibold">
-                Can you work from engineer’s drawings?
+                Can you work from engineer's drawings?
               </h3>
               <p className="text-gray-600 mt-1">
-                Yes — we regularly fabricate steelwork from structural drawings.
+                Yes - we regularly fabricate steelwork from structural drawings.
               </p>
             </div>
           </div>
@@ -462,7 +462,7 @@ export default function Home() {
             <div>
               <h2 className="text-2xl font-bold">Get an accurate quote</h2>
               <p className="mt-3 text-gray-600">
-                Send drawings or project details and we’ll respond with pricing
+                Send drawings or project details and we'll respond with pricing
                 and lead times.
               </p>
 
