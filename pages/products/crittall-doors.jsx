@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import BreadcrumbSchema from "../../components/BreadcrumbSchema";
 
 export default function SteelAndGlassCrittallPage() {
   // FAQ schema must match visible FAQ content on the page
@@ -65,13 +66,25 @@ export default function SteelAndGlassCrittallPage() {
         />
       </Head>
 
+      {/* Breadcrumb Schema */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", item: "https://www.northwayengineering.co.uk/" },
+          { name: "Products", item: "https://www.northwayengineering.co.uk/#services" },
+          {
+            name: "Steel & Glass Doors",
+            item: "https://www.northwayengineering.co.uk/products/crittall-doors",
+          },
+        ]}
+      />
+
       <Header />
 
       <main className="bg-gray-50">
         {/* INTRO */}
         <section className="max-w-5xl mx-auto px-6 py-16">
           <h1 className="text-3xl font-bold">Steel &amp; Glass (Crittall Style)</h1>
-          <p className="mt-4 text-gray-600 max-w-2xl">
+          <p className="mt-4 text-gray-600 max-w-2xl>
             Bespoke steel and glass doors, screens and partitions made to measure across{" "}
             <strong>Liverpool</strong>, <strong>Merseyside</strong> and the{" "}
             <strong>North West</strong>. Clean lines, slim profiles and quality finishes — ideal
@@ -258,3 +271,4 @@ export default function SteelAndGlassCrittallPage() {
     </>
   );
 }
+
