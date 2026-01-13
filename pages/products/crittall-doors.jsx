@@ -84,7 +84,7 @@ export default function SteelAndGlassCrittallPage() {
         {/* INTRO */}
         <section className="max-w-5xl mx-auto px-6 py-16">
           <h1 className="text-3xl font-bold">Steel &amp; Glass (Crittall Style)</h1>
-          <p className="mt-4 text-gray-600 max-w-2xl>
+          <p className="mt-4 text-gray-600 max-w-2xl">
             Bespoke steel and glass doors, screens and partitions made to measure across{" "}
             <strong>Liverpool</strong>, <strong>Merseyside</strong> and the{" "}
             <strong>North West</strong>. Clean lines, slim profiles and quality finishes — ideal
