@@ -50,6 +50,26 @@ export default function SteelAndGlassCrittallPage() {
     ],
   };
 
+  // Service schema (per-page)
+  const SERVICE_SCHEMA = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Crittall-Style Steel & Glass Doors",
+    serviceType: "Steel and glass doors, screens and partitions",
+    provider: {
+      "@type": "ConstructionBusiness",
+      name: "Northway Engineering",
+      url: "https://www.northwayengineering.co.uk",
+    },
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: "Liverpool and the North West",
+    },
+    url: "https://www.northwayengineering.co.uk/products/crittall-doors",
+    description:
+      "Crittall-style steel & glass doors in Liverpool & the North West — made-to-measure internal doors, screens and partitions with quality finishes and glazing options.",
+  };
+
   return (
     <>
       <Head>
@@ -64,13 +84,19 @@ export default function SteelAndGlassCrittallPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
         />
+
+        {/* Service Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }}
+        />
       </Head>
 
       {/* Breadcrumb Schema */}
       <BreadcrumbSchema
         items={[
           { name: "Home", item: "https://www.northwayengineering.co.uk/" },
-          { name: "Products", item: "https://www.northwayengineering.co.uk/#services" },
+          { name: "Services", item: "https://www.northwayengineering.co.uk/#services" },
           {
             name: "Steel & Glass Doors",
             item: "https://www.northwayengineering.co.uk/products/crittall-doors",
@@ -128,7 +154,9 @@ export default function SteelAndGlassCrittallPage() {
 
         {/* WHAT WE DO */}
         <section className="max-w-5xl mx-auto px-6 pb-16">
-          <h2 className="text-2xl font-bold">Crittall-style doors &amp; partitions made to measure</h2>
+          <h2 className="text-2xl font-bold">
+            Crittall-style doors &amp; partitions made to measure
+          </h2>
           <p className="mt-3 text-gray-600 max-w-3xl">
             We manufacture internal steel-framed glazing to suit your opening and layout. Whether
             you want a single door, double doors with side panels, or a full partition, we’ll help
