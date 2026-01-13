@@ -5,6 +5,50 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export default function BalustradesPage() {
+  // FAQ schema must match visible FAQ content on the page
+  const FAQ_SCHEMA = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Are your balustrades made to current regulations?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "We build balustrades with safety and practicality in mind and will advise on key considerations such as height, spacing and suitability for stairs, landings and balconies. If your project has specific requirements, send details and we’ll work to them.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can you do glass balustrades for stairs and landings?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes — we can supply steel posts/handrails with glass infills for a modern, open look. We’ll help you choose the right layout for your space.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you install external balustrades for balconies and terraces?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes. External balustrades are finished for durability and installed with a tidy, secure fixing method suited to the surface and environment.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What do you need for an accurate quote?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Photos, rough sizes, and where it’s being fitted (stairs, landing, balcony or terrace). If you have a sketch, drawings, or a style reference, send that too.",
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <Head>
@@ -12,6 +56,12 @@ export default function BalustradesPage() {
         <meta
           name="description"
           content="Balustrades in Liverpool & the North West — steel and glass balustrades for stairs, landings, balconies and terraces. Made to measure with a clean, safe finish."
+        />
+
+        {/* FAQ Schema for Rich Results */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
         />
       </Head>
 
@@ -228,4 +278,3 @@ export default function BalustradesPage() {
     </>
   );
 }
-
