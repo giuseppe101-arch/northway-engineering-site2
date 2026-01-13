@@ -5,6 +5,50 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export default function CompositeFencingPage() {
+  // FAQ schema must match visible FAQ content on the page
+  const FAQ_SCHEMA = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How long does composite fencing last?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Composite fencing is designed for long-term outdoor use and won’t rot like timber. With proper posts and a tidy install, it’s a strong, low-maintenance option for gardens and boundaries.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can you remove my old fencing and install new composite?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes — we can remove existing panels and posts, prep the line, and install the new composite system with straight runs and clean finishing trims.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can fencing be matched with composite gates?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes. We can match colours and styles so your fencing works perfectly with composite gates for a consistent entrance and boundary look.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What do you need for an accurate quote?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Photos of the area, the approximate length to be fenced, preferred height, and any obstacles (steps, slopes, corners). If you want matching gates, include photos of the entrance too.",
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <Head>
@@ -12,6 +56,12 @@ export default function CompositeFencingPage() {
         <meta
           name="description"
           content="Composite fencing in Liverpool & the North West — low-maintenance fencing installed with strong posts and a clean finish. Modern privacy fencing for gardens and boundaries."
+        />
+
+        {/* FAQ Schema for Rich Results */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
         />
       </Head>
 
