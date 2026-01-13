@@ -5,6 +5,50 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export default function StructuralSteelPage() {
+  // FAQ schema must match visible FAQ content on the page
+  const FAQ_SCHEMA = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Do you work from engineer’s drawings?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes — we fabricate to structural engineer’s drawings and can advise on practical details like connection plates, bearing points and site access for installation.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can you supply and fit RSJs for knock-throughs and extensions?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes. We regularly supply and install beams/RSJs for domestic alterations, including goalposts for wider openings, working safely on site.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What details do you need for an accurate quote?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Drawings (or a clear photo of them), your postcode, and any access/lifting details. If you’re unsure, send site photos and we’ll advise what’s needed.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you cover Liverpool and the North West?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes — we work across Liverpool, Merseyside and the wider North West for domestic and commercial structural steel projects.",
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <Head>
@@ -12,6 +56,12 @@ export default function StructuralSteelPage() {
         <meta
           name="description"
           content="Structural steel fabrication in Liverpool & the North West — beams/RSJs, goalposts and frames made to drawings with safe installation for domestic and commercial projects."
+        />
+
+        {/* FAQ Schema for Rich Results */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
         />
       </Head>
 
