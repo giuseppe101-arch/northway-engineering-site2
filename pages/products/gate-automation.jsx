@@ -50,6 +50,26 @@ export default function GateAutomationPage() {
     ],
   };
 
+  // Service schema (per-page)
+  const SERVICE_SCHEMA = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Gate Automation",
+    serviceType: "Automatic gate installation, repairs and upgrades",
+    provider: {
+      "@type": "ConstructionBusiness",
+      name: "Northway Engineering",
+      url: "https://www.northwayengineering.co.uk",
+    },
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: "Liverpool and the North West",
+    },
+    url: "https://www.northwayengineering.co.uk/products/gate-automation",
+    description:
+      "Gate automation in Liverpool and the North West — installation, repairs and upgrades for swing/sliding gates, access control and safety systems.",
+  };
+
   return (
     <>
       <Head>
@@ -64,13 +84,19 @@ export default function GateAutomationPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
         />
+
+        {/* Service Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }}
+        />
       </Head>
 
       {/* Breadcrumb Schema */}
       <BreadcrumbSchema
         items={[
           { name: "Home", item: "https://www.northwayengineering.co.uk/" },
-          { name: "Products", item: "https://www.northwayengineering.co.uk/#services" },
+          { name: "Services", item: "https://www.northwayengineering.co.uk/#services" },
           {
             name: "Gate Automation",
             item: "https://www.northwayengineering.co.uk/products/gate-automation",
@@ -255,5 +281,6 @@ export default function GateAutomationPage() {
     </>
   );
 }
+
 
               
