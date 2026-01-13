@@ -83,6 +83,129 @@ export default function Home() {
     ],
   };
 
+  // NEW: Homepage Services schema (matches the 6 visible service cards)
+  const SERVICES_SCHEMA = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Northway Engineering services",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@type": "Service",
+          name: "Composite Gates",
+          serviceType: "Composite gates",
+          provider: {
+            "@type": "ConstructionBusiness",
+            name: "Northway Engineering",
+            url: "https://www.northwayengineering.co.uk",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Liverpool and the North West",
+          },
+          url: "https://www.northwayengineering.co.uk/products/composite-gates",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@type": "Service",
+          name: "Composite Fencing",
+          serviceType: "Composite fencing",
+          provider: {
+            "@type": "ConstructionBusiness",
+            name: "Northway Engineering",
+            url: "https://www.northwayengineering.co.uk",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Liverpool and the North West",
+          },
+          url: "https://www.northwayengineering.co.uk/products/composite-fencing",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        item: {
+          "@type": "Service",
+          name: "Steel & Glass Doors",
+          serviceType: "Crittall-style steel and glass doors",
+          provider: {
+            "@type": "ConstructionBusiness",
+            name: "Northway Engineering",
+            url: "https://www.northwayengineering.co.uk",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Liverpool and the North West",
+          },
+          url: "https://www.northwayengineering.co.uk/products/crittall-doors",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        item: {
+          "@type": "Service",
+          name: "Balustrades",
+          serviceType: "Steel and glass balustrades",
+          provider: {
+            "@type": "ConstructionBusiness",
+            name: "Northway Engineering",
+            url: "https://www.northwayengineering.co.uk",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Liverpool and the North West",
+          },
+          url: "https://www.northwayengineering.co.uk/products/balustrade",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 5,
+        item: {
+          "@type": "Service",
+          name: "Structural Steel",
+          serviceType: "Structural steel fabrication and installation",
+          provider: {
+            "@type": "ConstructionBusiness",
+            name: "Northway Engineering",
+            url: "https://www.northwayengineering.co.uk",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Liverpool and the North West",
+          },
+          url: "https://www.northwayengineering.co.uk/products/structural-steel",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 6,
+        item: {
+          "@type": "Service",
+          name: "Gate Automation",
+          serviceType: "Automatic gate systems",
+          provider: {
+            "@type": "ConstructionBusiness",
+            name: "Northway Engineering",
+            url: "https://www.northwayengineering.co.uk",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Liverpool and the North West",
+          },
+          url: "https://www.northwayengineering.co.uk/products/gate-automation",
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <Head>
@@ -98,19 +221,29 @@ export default function Home() {
         {/* Local Business schema */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA),
+          }}
         />
 
         {/* Organization schema */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_SCHEMA) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(ORGANIZATION_SCHEMA),
+          }}
         />
 
         {/* FAQ schema (homepage FAQs) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
+        />
+
+        {/* NEW: Services schema (homepage service cards) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICES_SCHEMA) }}
         />
       </Head>
 
@@ -226,42 +359,60 @@ export default function Home() {
           </p>
 
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link href="/products/composite-gates" className="bg-white rounded-lg p-6 shadow-sm block">
+            <Link
+              href="/products/composite-gates"
+              className="bg-white rounded-lg p-6 shadow-sm block"
+            >
               <h3 className="font-semibold text-lg">Composite Gates</h3>
               <p className="mt-3 text-gray-600 text-sm">
                 Made-to-measure steel-framed composite gates.
               </p>
             </Link>
 
-            <Link href="/products/composite-fencing" className="bg-white rounded-lg p-6 shadow-sm block">
+            <Link
+              href="/products/composite-fencing"
+              className="bg-white rounded-lg p-6 shadow-sm block"
+            >
               <h3 className="font-semibold text-lg">Composite Fencing</h3>
               <p className="mt-3 text-gray-600 text-sm">
                 Modern, low-maintenance fencing systems.
               </p>
             </Link>
 
-            <Link href="/products/crittall-doors" className="bg-white rounded-lg p-6 shadow-sm block">
+            <Link
+              href="/products/crittall-doors"
+              className="bg-white rounded-lg p-6 shadow-sm block"
+            >
               <h3 className="font-semibold text-lg">Steel &amp; Glass Doors</h3>
               <p className="mt-3 text-gray-600 text-sm">
                 Crittall-style doors and internal screens.
               </p>
             </Link>
 
-            <Link href="/products/balustrade" className="bg-white rounded-lg p-6 shadow-sm block">
+            <Link
+              href="/products/balustrade"
+              className="bg-white rounded-lg p-6 shadow-sm block"
+            >
               <h3 className="font-semibold text-lg">Balustrades</h3>
               <p className="mt-3 text-gray-600 text-sm">
                 Steel and glass balustrades for stairs and balconies.
               </p>
             </Link>
 
-            <Link href="/products/structural-steel" className="bg-white rounded-lg p-6 shadow-sm block">
+            <Link
+              href="/products/structural-steel"
+              className="bg-white rounded-lg p-6 shadow-sm block"
+            >
               <h3 className="font-semibold text-lg">Structural Steel</h3>
               <p className="mt-3 text-gray-600 text-sm">
                 RSJs, beams and fabricated steel frames.
               </p>
             </Link>
 
-            <Link href="/products/gate-automation" className="bg-white rounded-lg p-6 shadow-sm block">
+            <Link
+              href="/products/gate-automation"
+              className="bg-white rounded-lg p-6 shadow-sm block"
+            >
               <h3 className="font-semibold text-lg">Gate Automation</h3>
               <p className="mt-3 text-gray-600 text-sm">
                 Automated swing and sliding gate systems.
@@ -339,15 +490,31 @@ export default function Home() {
               />
 
               <label className="block text-sm font-medium">Name</label>
-              <input name="name" required className="mt-1 block w-full border rounded px-3 py-2" />
+              <input
+                name="name"
+                required
+                className="mt-1 block w-full border rounded px-3 py-2"
+              />
 
               <label className="block text-sm font-medium mt-4">Email</label>
-              <input name="email" type="email" required className="mt-1 block w-full border rounded px-3 py-2" />
+              <input
+                name="email"
+                type="email"
+                required
+                className="mt-1 block w-full border rounded px-3 py-2"
+              />
 
               <label className="block text-sm font-medium mt-4">Message</label>
-              <textarea name="message" rows={5} className="mt-1 block w-full border rounded px-3 py-2" />
+              <textarea
+                name="message"
+                rows={5}
+                className="mt-1 block w-full border rounded px-3 py-2"
+              />
 
-              <button type="submit" className="mt-6 bg-slate-800 text-white px-5 py-3 rounded">
+              <button
+                type="submit"
+                className="mt-6 bg-slate-800 text-white px-5 py-3 rounded"
+              >
                 Send enquiry
               </button>
             </form>
@@ -359,3 +526,4 @@ export default function Home() {
     </>
   );
 }
+
