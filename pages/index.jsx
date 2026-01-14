@@ -235,12 +235,41 @@ export default function HomePage() {
                 image, include those too and we’ll come back with advice and pricing.
               </p>
 
+              {/* ADDED: visible contact details */}
+              <div className="mt-5 flex flex-col gap-2 text-sm text-gray-200">
+                <p>
+                  Email{" "}
+                  <a
+                    href="mailto:info@northwayengineering.co.uk"
+                    className="font-semibold text-white hover:underline"
+                  >
+                    info@northwayengineering.co.uk
+                  </a>
+                </p>
+                <p>
+                  Phone{" "}
+                  <a
+                    href="tel:07803489970"
+                    className="font-semibold text-white hover:underline"
+                  >
+                    07803 489970
+                  </a>
+                </p>
+              </div>
+
+              {/* Buttons */}
               <div className="mt-6 flex flex-wrap gap-3">
                 <a
-                  href="mailto:info@northwayengineering.co.uk"
+                  href="mailto:info@northwayengineering.co.uk?subject=Quote%20request%20%E2%80%94%20Northway%20Engineering"
                   className="inline-flex items-center justify-center rounded-xl bg-white text-gray-900 px-5 py-3 font-semibold shadow-sm"
                 >
                   Email us
+                </a>
+                <a
+                  href="tel:07803489970"
+                  className="inline-flex items-center justify-center rounded-xl border border-white/30 text-white px-5 py-3 font-semibold"
+                >
+                  Call now
                 </a>
                 <a
                   href="/#services"
