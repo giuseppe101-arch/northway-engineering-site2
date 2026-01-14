@@ -6,10 +6,12 @@ import Footer from "../components/Footer";
 import BreadcrumbSchema from "../components/BreadcrumbSchema";
 
 export default function HomePage() {
-  // JSON-LD helper (prevents rare </script> edge-cases)
-  const toJsonLd = (obj) => JSON.stringify(obj).replace(/<\/script>/g, "<\\/script>");
+  const toJsonLd = (obj) =>
+    JSON.stringify(obj).replace(/<\/script>/g, "<\\/script>");
 
-  // Homepage Local Business schema (with your real logo file)
+  const PHONE_RAW = "07557237196";
+  const PHONE_INTL = "+447557237196";
+
   const LOCAL_BUSINESS_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
@@ -31,7 +33,7 @@ export default function HomePage() {
     contactPoint: [
       {
         "@type": "ContactPoint",
-        telephone: "+447557237196",
+        telephone: PHONE_INTL,
         contactType: "customer service",
         email: "info@northwayengineering.co.uk",
         areaServed: "GB",
@@ -102,9 +104,10 @@ export default function HomePage() {
           name="description"
           content="Northway Engineering — bespoke steel fabrication, structural steel, steel & glass doors, balustrades and gates across Liverpool and the North West."
         />
-        <link rel="canonical" href="https://www.northwayengineering.co.uk/" />
-
-        {/* Local Business / Construction schema */}
+        <link
+          rel="canonical"
+          href="https://www.northwayengineering.co.uk/"
+        />
         <script
           id="ld-local-business"
           type="application/ld+json"
@@ -112,15 +115,15 @@ export default function HomePage() {
         />
       </Head>
 
-      {/* Breadcrumb Schema (homepage) */}
       <BreadcrumbSchema
-        items={[{ name: "Home", item: "https://www.northwayengineering.co.uk/" }]}
+        items={[
+          { name: "Home", item: "https://www.northwayengineering.co.uk/" },
+        ]}
       />
 
       <Header />
 
       <main className="bg-gray-50">
-        {/* HERO */}
         <section className="max-w-6xl mx-auto px-6 py-16">
           <div className="grid gap-10 md:grid-cols-2 items-center">
             <div>
@@ -128,8 +131,9 @@ export default function HomePage() {
                 Steel fabrication &amp; gates in Liverpool
               </h1>
               <p className="mt-4 text-gray-600 max-w-xl">
-                Bespoke steelwork, structural steel, steel &amp; glass doors, balustrades,
-                composite gates and gate automation across Liverpool, Merseyside and the North West.
+                Bespoke steelwork, structural steel, steel &amp; glass doors,
+                balustrades, composite gates and gate automation across
+                Liverpool, Merseyside and the North West.
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3">
@@ -147,7 +151,6 @@ export default function HomePage() {
                 </a>
               </div>
 
-              {/* Quick links */}
               <div className="mt-8 flex flex-wrap gap-3 text-sm">
                 <Link className="underline" href="/products/structural-steel">
                   Structural steel
@@ -167,7 +170,6 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* HERO IMAGE (update src to your actual hero image if different) */}
             <div className="relative w-full h-80 md:h-[420px] rounded-2xl overflow-hidden shadow-sm bg-white">
               <Image
                 src="/images/crittall-doors.jpg"
@@ -181,12 +183,11 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* SERVICES */}
         <section id="services" className="max-w-6xl mx-auto px-6 pb-16">
           <h2 className="text-2xl font-bold">Services</h2>
           <p className="mt-3 text-gray-600 max-w-3xl">
-            Fabrication and installation for domestic and commercial projects — built to measure,
-            finished properly, and installed safely.
+            Fabrication and installation for domestic and commercial projects —
+            built to measure, finished properly, and installed safely.
           </p>
 
           <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -235,17 +236,16 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* CONTACT CTA */}
         <section id="contact" className="bg-white">
           <div className="max-w-6xl mx-auto px-6 py-14">
             <div className="rounded-2xl bg-gray-900 text-white p-8 md:p-10">
               <h2 className="text-2xl font-bold">Request a quote</h2>
               <p className="mt-3 text-gray-200 max-w-2xl">
-                Send photos, rough sizes and your postcode. If you have drawings or a reference
-                image, include those too and we’ll come back with advice and pricing.
+                Send photos, rough sizes and your postcode. If you have drawings
+                or a reference image, include those too and we’ll come back with
+                advice and pricing.
               </p>
 
-              {/* visible contact details */}
               <div className="mt-5 flex flex-col gap-2 text-sm text-gray-200">
                 <p>
                   Email{" "}
@@ -259,35 +259,105 @@ export default function HomePage() {
                 <p>
                   Phone{" "}
                   <a
-                    href="tel:07557237196"
+                    href={`tel:${PHONE_RAW}`}
                     className="font-semibold text-white hover:underline"
                   >
-                    07557237196
+                    {PHONE_RAW}
                   </a>
                 </p>
               </div>
 
-              {/* Buttons */}
-              <div className="mt-6 flex flex-wrap gap-3">
-                <a
-                  href="mailto:info@northwayengineering.co.uk?subject=Quote%20request%20%E2%80%94%20Northway%20Engineering"
-                  className="inline-flex items-center justify-center rounded-xl bg-white text-gray-900 px-5 py-3 font-semibold shadow-sm"
-                >
-                  Email us
-                </a>
-                <a
-                  href="tel:07557237196"
-                  className="inline-flex items-center justify-center rounded-xl border border-white/30 text-white px-5 py-3 font-semibold"
-                >
-                  Call now
-                </a>
-                <a
-                  href="/#services"
-                  className="inline-flex items-center justify-center rounded-xl border border-white/30 text-white px-5 py-3 font-semibold"
-                >
-                  View services
-                </a>
-              </div>
+              <form
+                action="https://formspree.io/f/xqeeaada"
+                method="POST"
+                className="mt-6 grid gap-4 md:grid-cols-2"
+              >
+                <input type="text" name="_gotcha" className="hidden" />
+
+                <div>
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="Name *"
+                    className="w-full rounded-xl px-4 py-3 text-gray-900"
+                  />
+                </div>
+
+                <div>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="Email *"
+                    className="w-full rounded-xl px-4 py-3 text-gray-900"
+                  />
+                </div>
+
+                <div>
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone"
+                    className="w-full rounded-xl px-4 py-3 text-gray-900"
+                  />
+                </div>
+
+                <div>
+                  <input
+                    type="text"
+                    name="postcode"
+                    placeholder="Postcode"
+                    className="w-full rounded-xl px-4 py-3 text-gray-900"
+                  />
+                </div>
+
+                <div className="md:col-span-2">
+                  <textarea
+                    name="message"
+                    required
+                    rows={5}
+                    placeholder="Message *"
+                    className="w-full rounded-xl px-4 py-3 text-gray-900"
+                  />
+                </div>
+
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New website enquiry — Northway Engineering"
+                />
+
+                <div className="md:col-span-2 flex flex-wrap gap-3 pt-2">
+                  <button
+                    type="submit"
+                    className="inline-flex items-center justify-center rounded-xl bg-white text-gray-900 px-5 py-3 font-semibold shadow-sm"
+                  >
+                    Send enquiry
+                  </button>
+
+                  <a
+                    href="mailto:info@northwayengineering.co.uk"
+                    className="inline-flex items-center justify-center rounded-xl border border-white/30 text-white px-5 py-3 font-semibold"
+                  >
+                    Prefer email?
+                  </a>
+
+                  <a
+                    href={`tel:${PHONE_RAW}`}
+                    className="inline-flex items-center justify-center rounded-xl border border-white/30 text-white px-5 py-3 font-semibold"
+                  >
+                    Call now
+                  </a>
+
+                  <a
+                    href="/#services"
+                    className="inline-flex items-center justify-center rounded-xl border border-white/30 text-white px-5 py-3 font-semibold"
+                  >
+                    View services
+                  </a>
+                </div>
+              </form>
             </div>
           </div>
         </section>
@@ -297,3 +367,4 @@ export default function HomePage() {
     </>
   );
 }
+
