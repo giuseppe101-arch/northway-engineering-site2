@@ -249,7 +249,7 @@ export default function HomePage() {
                 <p>
                   Phone{" "}
                   <a
-                    href="tel:07803489970"
+                    href="tel:07557237196"
                     className="font-semibold text-white hover:underline"
                   >
                     07803 489970
