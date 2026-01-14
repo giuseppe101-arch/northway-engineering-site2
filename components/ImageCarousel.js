@@ -50,5 +50,64 @@ export default function ImageCarousel({
   return (
     <div className={`relative overflow-hidden rounded-2xl ${className}`}>
       <div
-        className="flex transition-transform duration-500 ease-i
+        className="flex transition-transform duration-500 ease-in-out"
+        style={{ transform: `translateX(-${index * 100}%)` }}
+        onMouseDown={(e) => onStart(e.clientX)}
+        onMouseUp={(e) => onEnd(e.clientX)}
+        onTouchStart={(e) => onStart(e.touches[0].clientX)}
+        onTouchEnd={(e) => onEnd(e.changedTouches[0].clientX)}
+      >
+        {safeImages.map((src, i) => (
+          <div key={`${src}-${i}`} className="relative w-full flex-shrink-0">
+            <div className="relative w-full h-full">
+              <Image
+                src={src}
+                alt={`Steel & glass doors example ${i + 1}`}
+                fill
+                className={`object-cover object-center ${imageClassName}`}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority={priority && i === 0}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {safeImages.length > 1 && (
+        <>
+          <button
+            type="button"
+            onClick={prev}
+            aria-label="Previous image"
+            className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/45 hover:bg-black/60 text-white rounded-full w-10 h-10 flex items-center justify-center"
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            onClick={next}
+            aria-label="Next image"
+            className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/45 hover:bg-black/60 text-white rounded-full w-10 h-10 flex items-center justify-center"
+          >
+            ›
+          </button>
+
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+            {safeImages.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                aria-label={`Go to slide ${i + 1}`}
+                onClick={() => goTo(i)}
+                className={`h-2.5 w-2.5 rounded-full ${
+                  i === index ? "bg-white" : "bg-white/40"
+                }`}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
 
