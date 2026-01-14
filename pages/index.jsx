@@ -266,7 +266,7 @@ export default function HomePage() {
                   Email us
                 </a>
                 <a
-                  href="tel:07803489970"
+                  href="tel:07557237196"
                   className="inline-flex items-center justify-center rounded-xl border border-white/30 text-white px-5 py-3 font-semibold"
                 >
                   Call now
