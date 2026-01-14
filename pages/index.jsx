@@ -200,27 +200,27 @@ export default function HomePage() {
                 </a>
               </div>
 
-             <div className="mt-8 flex flex-wrap gap-3 text-sm">
-  <Link className="underline" href="/products/structural-steel">
-    Structural steel
-  </Link>
-  <Link className="underline" href="/products/crittall-doors">
-    Steel &amp; glass doors
-  </Link>
-  <Link className="underline" href="/products/balustrade">
-    Balustrades
-  </Link>
-  <Link className="underline" href="/products/composite-gates">
-    Composite gates
-  </Link>
-  <Link className="underline" href="/products/composite-fencing">
-    Composite fencing
-  </Link>
-  <Link className="underline" href="/products/gate-automation">
-    Gate automation
-  </Link>
-</div>
-
+              <div className="mt-8 flex flex-wrap gap-3 text-sm">
+                <Link className="underline" href="/products/structural-steel">
+                  Structural steel
+                </Link>
+                <Link className="underline" href="/products/crittall-doors">
+                  Steel &amp; glass doors
+                </Link>
+                <Link className="underline" href="/products/balustrade">
+                  Balustrades
+                </Link>
+                <Link className="underline" href="/products/composite-gates">
+                  Composite gates
+                </Link>
+                <Link className="underline" href="/products/composite-fencing">
+                  Composite fencing
+                </Link>
+                <Link className="underline" href="/products/gate-automation">
+                  Gate automation
+                </Link>
+              </div>
+            </div>
 
             <div className="relative w-full h-80 md:h-[420px] rounded-2xl overflow-hidden shadow-sm bg-white">
               <Image
@@ -490,4 +490,4 @@ export default function HomePage() {
   );
 }
 
-       
+              
