@@ -12,6 +12,10 @@ export default function HomePage() {
   const PHONE_RAW = "07557237196";
   const PHONE_INTL = "+447557237196";
 
+  const INSTAGRAM_URL = "https://www.instagram.com/northwayengineering";
+  const FACEBOOK_URL = "https://www.facebook.com/northwayengineering";
+  const WHATSAPP_URL = "https://wa.me/447557237196";
+
   const LOCAL_BUSINESS_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
@@ -104,10 +108,7 @@ export default function HomePage() {
           name="description"
           content="Northway Engineering — bespoke steel fabrication, structural steel, steel & glass doors, balustrades and gates across Liverpool and the North West."
         />
-        <link
-          rel="canonical"
-          href="https://www.northwayengineering.co.uk/"
-        />
+        <link rel="canonical" href="https://www.northwayengineering.co.uk/" />
         <script
           id="ld-local-business"
           type="application/ld+json"
@@ -116,9 +117,7 @@ export default function HomePage() {
       </Head>
 
       <BreadcrumbSchema
-        items={[
-          { name: "Home", item: "https://www.northwayengineering.co.uk/" },
-        ]}
+        items={[{ name: "Home", item: "https://www.northwayengineering.co.uk/" }]}
       />
 
       <Header />
@@ -132,8 +131,8 @@ export default function HomePage() {
               </h1>
               <p className="mt-4 text-gray-600 max-w-xl">
                 Bespoke steelwork, structural steel, steel &amp; glass doors,
-                balustrades, composite gates and gate automation across
-                Liverpool, Merseyside and the North West.
+                balustrades, composite gates and gate automation across Liverpool,
+                Merseyside and the North West.
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3">
@@ -148,6 +147,33 @@ export default function HomePage() {
                   className="inline-flex items-center justify-center rounded-xl border border-gray-900/20 bg-white text-gray-900 px-5 py-3 font-semibold"
                 >
                   View services
+                </a>
+              </div>
+
+              <div className="mt-6 flex flex-wrap gap-3 text-sm">
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                >
+                  Instagram
+                </a>
+                <a
+                  href={FACEBOOK_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                >
+                  Facebook
+                </a>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                >
+                  WhatsApp
                 </a>
               </div>
 
@@ -265,6 +291,35 @@ export default function HomePage() {
                     {PHONE_RAW}
                   </a>
                 </p>
+                <p>
+                  WhatsApp{" "}
+                  <a
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-white hover:underline"
+                  >
+                    Message us
+                  </a>
+                </p>
+                <p className="pt-1 flex flex-wrap gap-3">
+                  <a
+                    href={INSTAGRAM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline"
+                  >
+                    Instagram
+                  </a>
+                  <a
+                    href={FACEBOOK_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline"
+                  >
+                    Facebook
+                  </a>
+                </p>
               </div>
 
               <form
@@ -335,6 +390,15 @@ export default function HomePage() {
                   >
                     Send enquiry
                   </button>
+
+                  <a
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-xl border border-white/30 text-white px-5 py-3 font-semibold"
+                  >
+                    WhatsApp us
+                  </a>
 
                   <a
                     href="mailto:info@northwayengineering.co.uk"
