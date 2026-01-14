@@ -223,15 +223,16 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* HERO CAROUSEL (keeps your existing image as slide 1) */}
+            {/* HERO CAROUSEL */}
             <div className="relative w-full h-80 md:h-[420px] rounded-2xl overflow-hidden shadow-sm bg-white">
               <ImageCarousel
                 images={[
-                  "/images/crittall-doors.jpg", // existing image stays first
-                  "/images/crittall-doors-2.jpg",
-                  "/images/crittall-doors-3.jpg",
-                  "/images/crittall-doors-4.jpg",
-                  "/images/crittall-doors-5.jpg",
+                  "/images/crittall-doors.jpg",
+                  "/images/carousel1.jpg",
+                  "/images/carousel2.jpg",
+                  "/images/carousel3.jpg",
+                  "/images/carousel4.jpg",
+                  "/images/carousel5.jpg",
                 ]}
                 autoPlay={true}
                 interval={4500}
@@ -495,3 +496,4 @@ export default function HomePage() {
     </>
   );
 }
+
