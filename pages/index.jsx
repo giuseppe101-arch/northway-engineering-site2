@@ -28,6 +28,16 @@ export default function HomePage() {
       addressRegion: "Merseyside",
       addressCountry: "GB",
     },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: "+447557237196",
+        contactType: "customer service",
+        email: "info@northwayengineering.co.uk",
+        areaServed: "GB",
+        availableLanguage: ["English"],
+      },
+    ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Engineering Services",
@@ -235,7 +245,7 @@ export default function HomePage() {
                 image, include those too and we’ll come back with advice and pricing.
               </p>
 
-              {/* ADDED: visible contact details */}
+              {/* visible contact details */}
               <div className="mt-5 flex flex-col gap-2 text-sm text-gray-200">
                 <p>
                   Email{" "}
@@ -287,4 +297,3 @@ export default function HomePage() {
     </>
   );
 }
-
