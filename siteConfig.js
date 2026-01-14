@@ -2,7 +2,7 @@
 export const SITE = {
   name: "Northway Engineering",
   email: "info@northwayengineering.co.uk",
-  phone: "07803489970",
+  phone: "07557237196",
   address: "Liverpool Road North, Maghull, L31 2HN",
   description:
     "Steel fabrication and structural engineering — design, fabrication and installation across Liverpool and the North West.",
