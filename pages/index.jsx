@@ -252,7 +252,7 @@ export default function HomePage() {
                     href="tel:07557237196"
                     className="font-semibold text-white hover:underline"
                   >
-                    07803 489970
+                    07557237196
                   </a>
                 </p>
               </div>
