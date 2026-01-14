@@ -100,28 +100,6 @@ export default function HomePage() {
     },
   };
 
-  const IconInstagram = (props) => (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5Z" />
-      <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" />
-      <path d="M17.25 6.25a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" />
-    </svg>
-  );
-
-  const IconFacebook = (props) => (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.7-1.6H16.7V4.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.4V11H7.3v3H10v8h3.5Z" />
-      <path d="M12 2a10 10 0 1 0 0 20h.2V2H12Z" opacity=".08" />
-    </svg>
-  );
-
-  const IconWhatsApp = (props) => (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path d="M20.5 11.9A8.5 8.5 0 0 1 8.2 19.7L3 21l1.4-5A8.5 8.5 0 1 1 20.5 11.9Zm-8.5-6.6a6.6 6.6 0 0 0-5.7 9.9l-.6 2.2 2.2-.6a6.6 6.6 0 1 0 4.1-12.1Z" />
-      <path d="M9.4 8.4c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3.9 2.6 1 2.8.1.2 1.8 2.9 4.4 3.9 2.1.8 2.6.6 3 .6.5-.1 1.6-.6 1.8-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.4l-1.4-.7c-.2-.1-.4-.1-.6.2-.2.3-.7.7-.8.9-.1.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.3-.8-.7-1.3-1.6-1.5-1.9-.1-.3 0-.4.1-.5l.4-.5c.1-.1.2-.3.3-.5.1-.2.1-.4 0-.6l-.6-1.4Z" />
-    </svg>
-  );
-
   return (
     <>
       <Head>
@@ -154,27 +132,47 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Northway Engineering on Instagram"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white border border-gray-900/15 shadow-sm hover:shadow transition"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-xl overflow-hidden shadow-sm hover:shadow transition"
                 >
-                  <IconInstagram className="w-5 h-5 fill-gray-900" />
+                  <Image
+                    src="/images/instagramicon.jpg"
+                    alt="Instagram"
+                    width={40}
+                    height={40}
+                    className="object-cover"
+                  />
                 </a>
+
                 <a
                   href={FACEBOOK_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Northway Engineering on Facebook"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white border border-gray-900/15 shadow-sm hover:shadow transition"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-xl overflow-hidden shadow-sm hover:shadow transition"
                 >
-                  <IconFacebook className="w-5 h-5 fill-gray-900" />
+                  <Image
+                    src="/images/facebookicon.jpg"
+                    alt="Facebook"
+                    width={40}
+                    height={40}
+                    className="object-cover"
+                  />
                 </a>
+
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Message Northway Engineering on WhatsApp"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white border border-gray-900/15 shadow-sm hover:shadow transition"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-xl overflow-hidden shadow-sm hover:shadow transition"
                 >
-                  <IconWhatsApp className="w-5 h-5 fill-gray-900" />
+                  <Image
+                    src="/images/whatsappicon.jpg"
+                    alt="WhatsApp"
+                    width={40}
+                    height={40}
+                    className="object-cover"
+                  />
                 </a>
               </div>
 
@@ -327,24 +325,56 @@ export default function HomePage() {
                     Message us
                   </a>
                 </p>
-                <p className="pt-1 flex flex-wrap gap-3">
+
+                <div className="pt-2 flex items-center gap-3">
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline"
+                    aria-label="Northway Engineering on Instagram"
+                    className="inline-flex items-center justify-center w-10 h-10 rounded-xl overflow-hidden shadow-sm hover:shadow transition"
                   >
-                    Instagram
+                    <Image
+                      src="/images/instagramicon.jpg"
+                      alt="Instagram"
+                      width={40}
+                      height={40}
+                      className="object-cover"
+                    />
                   </a>
+
                   <a
                     href={FACEBOOK_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline"
+                    aria-label="Northway Engineering on Facebook"
+                    className="inline-flex items-center justify-center w-10 h-10 rounded-xl overflow-hidden shadow-sm hover:shadow transition"
                   >
-                    Facebook
+                    <Image
+                      src="/images/facebookicon.jpg"
+                      alt="Facebook"
+                      width={40}
+                      height={40}
+                      className="object-cover"
+                    />
                   </a>
-                </p>
+
+                  <a
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Message Northway Engineering on WhatsApp"
+                    className="inline-flex items-center justify-center w-10 h-10 rounded-xl overflow-hidden shadow-sm hover:shadow transition"
+                  >
+                    <Image
+                      src="/images/whatsappicon.jpg"
+                      alt="WhatsApp"
+                      width={40}
+                      height={40}
+                      className="object-cover"
+                    />
+                  </a>
+                </div>
               </div>
 
               <form
@@ -457,4 +487,4 @@ export default function HomePage() {
   );
 }
 
-   
+       
