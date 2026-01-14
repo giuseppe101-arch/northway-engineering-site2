@@ -48,9 +48,9 @@ export default function ImageCarousel({
   if (!safeImages.length) return null;
 
   return (
-    <div className={`relative overflow-hidden rounded-2xl ${className}`}>
+    <div className={`relative overflow-hidden rounded-2xl h-full w-full ${className}`}>
       <div
-        className="flex transition-transform duration-500 ease-in-out"
+        className="flex h-full transition-transform duration-500 ease-in-out"
         style={{ transform: `translateX(-${index * 100}%)` }}
         onMouseDown={(e) => onStart(e.clientX)}
         onMouseUp={(e) => onEnd(e.clientX)}
@@ -58,17 +58,18 @@ export default function ImageCarousel({
         onTouchEnd={(e) => onEnd(e.changedTouches[0].clientX)}
       >
         {safeImages.map((src, i) => (
-          <div key={`${src}-${i}`} className="relative w-full flex-shrink-0">
-            <div className="relative w-full h-full">
-              <Image
-                src={src}
-                alt={`Steel & glass doors example ${i + 1}`}
-                fill
-                className={`object-cover object-center ${imageClassName}`}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                priority={priority && i === 0}
-              />
-            </div>
+          <div
+            key={`${src}-${i}`}
+            className="relative w-full h-full flex-shrink-0"
+          >
+            <Image
+              src={src}
+              alt={`Steel & glass doors example ${i + 1}`}
+              fill
+              className={`object-cover object-center ${imageClassName}`}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority={priority && i === 0}
+            />
           </div>
         ))}
       </div>
