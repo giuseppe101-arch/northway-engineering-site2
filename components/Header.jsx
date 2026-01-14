@@ -5,8 +5,8 @@ import { SITE } from '../siteConfig'
 export default function Header() {
   return (
     <header className="bg-white shadow">
+      {/* TOP ROW */}
       <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
-        {/* LEFT: LOGO + NAME */}
         <div className="flex items-center gap-4">
           <div className="relative w-20 h-12">
             <Image
@@ -23,16 +23,16 @@ export default function Header() {
           </div>
         </div>
 
-        {/* RIGHT: CONTACT + NAV */}
         <div className="flex items-center gap-6">
-          {/* EMAIL */}
+          {/* DESKTOP EMAIL */}
           <a
-            href="mailto:info@northwayengineering.co.uk"
+            href={`mailto:${SITE.email}`}
             className="hidden md:block text-sm text-gray-600 hover:text-slate-800"
           >
-            info@northwayengineering.co.uk
+            {SITE.email}
           </a>
 
+          {/* DESKTOP NAV */}
           <nav className="hidden md:flex gap-6 items-center text-sm">
             <Link href="/#services" className="hover:text-slate-700">
               Services
@@ -52,7 +52,25 @@ export default function Header() {
           </nav>
         </div>
       </div>
+
+      {/* MOBILE CONTACT BAR */}
+      <div className="md:hidden border-t bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6 py-3 flex justify-between text-sm">
+          <a
+            href={`mailto:${SITE.email}`}
+            className="font-medium text-gray-800 hover:underline"
+          >
+            Email us
+          </a>
+
+          <a
+            href={`tel:${SITE.phone}`}
+            className="font-medium text-gray-800 hover:underline"
+          >
+            Call
+          </a>
+        </div>
+      </div>
     </header>
   )
 }
-
